@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Активности.Pages;
+using System.Windows.Forms;
+using System.Drawing;
 
 namespace Активности
 {
@@ -20,12 +23,53 @@ namespace Активности
     /// </summary>
     public partial class MainWindow : Window
     {
+        private System.Windows.Forms.NotifyIcon m_notifyIcon;
         public MainWindow()
         {
             InitializeComponent();
+            m_notifyIcon = new System.Windows.Forms.NotifyIcon();
+            m_notifyIcon.BalloonTipTitle = "Программа помещена в трей";
+            m_notifyIcon.BalloonTipText = "Чтобы открыть программу снова, нажмите на её иконку";
+            m_notifyIcon.Text = "Activiti"; //Пишется когда наводишь мышкой на программу в трее
+            m_notifyIcon.Icon = new System.Drawing.Icon(@"C:\Users\Spar9a\Documents\Visual Studio 2017\Projects\Активности_git\Активности\Активности\image\murr.ico");
+            m_notifyIcon.Click += new EventHandler(m_notifyIcon_Click);
         }
-
-        private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private WindowState m_storedWindowState = WindowState.Normal;
+        void OnStateChanged(object sender, EventArgs args)
+        {
+            if (WindowState == WindowState.Minimized)
+            {
+                Hide();
+                if (m_notifyIcon != null)
+                    m_notifyIcon.ShowBalloonTip(2000);
+            }
+            else
+                m_storedWindowState = WindowState;
+        }
+        void OnIsVisibleChanged(object sender, DependencyPropertyChangedEventArgs args)
+        {
+            CheckTrayIcon();
+        }
+        void m_notifyIcon_Click(object sender, EventArgs e)
+        {
+            Show();
+            WindowState = m_storedWindowState;
+        }
+        void CheckTrayIcon()
+        {
+            ShowTrayIcon(!IsVisible);
+        }
+        void ShowTrayIcon(bool show)
+        {
+            if (m_notifyIcon != null)
+                m_notifyIcon.Visible = show;
+        }
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            m_notifyIcon.Dispose();
+            m_notifyIcon = null;
+        }
+    private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
@@ -45,45 +89,30 @@ namespace Активности
 
         }
 
-        private void guil_10_x1_Click(object sender, RoutedEventArgs e)
+        private void tabControl_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-                guild_10.Value++;
+
         }
 
-        private void guil_10_x10_Click(object sender, RoutedEventArgs e)
+        private void ContentControl_Click(object sender, RoutedEventArgs e)
         {
-            double i;
-            i = 10.0 - guild_10.Value;
-            guild_10.Value += i;
-        }
-
-        private void guil_build_x1_Click(object sender, RoutedEventArgs e)
-        {
-            guild_build.Value++;
-        }
-        private void guil_build_x4_Click(object sender, RoutedEventArgs e)
-        {
-            double i;
-            i = 4.0 - guild_build.Value;
-            guild_build.Value += i;
-        }
-        private void pirate_island_x1_Click(object sender, RoutedEventArgs e)
-        {
-            pirate_island.Value++;
-        }
-        private void pirate_island_x2_Click(object sender, RoutedEventArgs e)
-        {
-            double i;
-            i = 2.0 - pirate_island.Value;
-            pirate_island.Value += i;
-        }
-        private void pack_x1_Click(object sender, RoutedEventArgs e)
-        {
-            pack.Value++;
-        }
-        private void guild_dog_x1_Click(object sender, RoutedEventArgs e)
-        {
-            guild_dog.Value++;
+            var btn = sender as System.Windows.Controls.Button;
+            string name = btn.Name;
+            switch (name)
+            {
+                case "necessarily":
+                    ContentBlock.Content = new necessarily();
+                    break;
+                case "additional":
+                    ContentBlock.Content = new additional();
+                    break;
+                case "desirable":
+                    ContentBlock.Content = new desirable();
+                    break;
+                case "minimum":
+                    ContentBlock.Content = new minimum();
+                    break;
+            }
         }
     }
 }

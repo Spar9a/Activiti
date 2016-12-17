@@ -6,129 +6,21 @@
         xmlns:local="clr-namespace:Активности"
         xmlns:PerformanceData="clr-namespace:System.Diagnostics.PerformanceData;assembly=System.Core" x:Class="Активности.MainWindow"
         mc:Ignorable="d"
-        Title="Activiti" Height="350" Width="525" Background="#FF3F3F46">
+        Title="Activiti" Height="600" Width="1100" Background="#FF3F3F46"
+        StateChanged = "OnStateChanged"
+        IsVisibleChanged = "OnIsVisibleChanged"
+        Closing = "Window_Closing">
     <Grid>
-        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="319" VerticalAlignment="Top" Width="517" Background="Black" BorderBrush="#FFACACAC">
-            <TabItem Header="Обязательно">
-                <TabItem.FocusVisualStyle>
-                    <Style>
-                        <Setter Property="Control.Template">
-                            <Setter.Value>
-                                <ControlTemplate>
-                                    <Rectangle Margin="2" SnapsToDevicePixels="True" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </TabItem.FocusVisualStyle>
-                <TabItem.Background>
-                    <SolidColorBrush Color="#FFF10F0F"/>
-                </TabItem.Background>
-                <TabItem.BorderBrush>
-                    <SolidColorBrush Color="#FFF0F0F0"/>
-                </TabItem.BorderBrush>
-                <Grid>
-                    <Grid.Background>
-                        <ImageBrush ImageSource="image/461104843.jpg" Stretch="UniformToFill"/>
-                    </Grid.Background>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="7*"/>
-                        <RowDefinition Height="90*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="151*"/>
-                        <ColumnDefinition Width="108*"/>
-                        <ColumnDefinition Width="108*"/>
-                        <ColumnDefinition Width="144*"/>
-                    </Grid.ColumnDefinitions>
-                    <Frame x:Name="frame" Content="Гильдейские квесты" HorizontalAlignment="Left" Height="20" Grid.Row="1" VerticalAlignment="Top" Width="151" Background="#FF09F509"/>
-                    <Frame x:Name="frame_Copy" Content="Ги квест стройка" HorizontalAlignment="Left" Height="20" Grid.Row="1" VerticalAlignment="Top" Width="151" Background="#FF09F509" Margin="0,25,0,0"/>
-                    <Frame x:Name="frame_Copy1" Content="Рыбалка" HorizontalAlignment="Left" Height="20" Grid.Row="1" VerticalAlignment="Top" Width="151" Background="#FFF5D509" Margin="0,150,0,0" Navigated="frame_Copy1_Navigated"/>
-                    <Frame x:Name="frame_Copy2" Content="Пиратский остров" HorizontalAlignment="Left" Height="20" Grid.Row="1" VerticalAlignment="Top" Width="151" Background="#FF09F509" Margin="0,50,0,0" Navigated="frame_Copy2_Navigated"/>
-                    <Frame x:Name="frame_Copy3" Content="Очки арены" HorizontalAlignment="Left" Height="20" Grid.Row="1" VerticalAlignment="Top" Width="151" Background="#FFCA09F5" Margin="0,125,0,0" Navigated="frame_Copy3_Navigated"/>
-                    <Frame x:Name="frame_Copy4" Content="Перевозка паков" HorizontalAlignment="Left" Height="20" Grid.Row="1" VerticalAlignment="Top" Width="151" Background="#FF09F509" Margin="0,75,0,0" Navigated="frame_Copy3_Navigated"/>
-                    <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="151" Foreground="White"><Run Text="Название квеста"/><Run Text="/"/><Run Text="его тип"/></TextBlock>
-                    <Grid Grid.ColumnSpan="2" Grid.Column="1" Margin="11,25,13,225" Grid.Row="1">
-                        <ProgressBar x:Name="guild_build" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="192" Minimum="0" Maximum="4"/>
-                        <TextBox x:Name="guild_build_counter" TextWrapping="Wrap" Text="{Binding Value, ElementName=guild_build}" VerticalAlignment="Center" BorderBrush="{x:Null}" Background="{x:Null}" VerticalContentAlignment="Center" RenderTransformOrigin="0,0.55" Height="20" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="85,0,95,0"/>
-                        <TextBlock x:Name="guild_build_text" HorizontalAlignment="Center" TextWrapping="Wrap" Text="из 4" VerticalAlignment="Center" Height="18" Width="30" RenderTransformOrigin="-0.188,0.425" Margin="97,2,65,0"/>
-                    </Grid>
-                    <Grid Grid.ColumnSpan="2" Grid.Column="1" Margin="10,50,13,200" Grid.Row="1">
-                        <ProgressBar x:Name="pirate_island" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="193" Minimum="0" Maximum="2"/>
-                        <TextBox x:Name="pirate_island_counter" TextWrapping="Wrap" Text="{Binding Value, ElementName=pirate_island}" VerticalAlignment="Center" BorderBrush="{x:Null}" Background="{x:Null}" VerticalContentAlignment="Center" RenderTransformOrigin="0,0.55" Height="20" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="86,0,95,0"/>
-                        <TextBlock x:Name="pirate_island_text" HorizontalAlignment="Center" TextWrapping="Wrap" Text="из 2" VerticalAlignment="Center" Height="18" Width="30" RenderTransformOrigin="-0.188,0.425" Margin="98,2,65,0"/>
-                    </Grid>
-                    <Grid Grid.ColumnSpan="2" Grid.Column="1" Margin="10,75,13,175" Grid.Row="1">
-                        <ProgressBar x:Name="pack" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="193" Minimum="0" Maximum="1"/>
-                        <TextBox x:Name="pack_counter" TextWrapping="Wrap" Text="{Binding Value, ElementName=pack}" VerticalAlignment="Center" BorderBrush="{x:Null}" Background="{x:Null}" VerticalContentAlignment="Center" RenderTransformOrigin="0,0.55" Height="20" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="86,0,95,0"/>
-                        <TextBlock x:Name="pack_text" HorizontalAlignment="Center" TextWrapping="Wrap" Text="из 1" VerticalAlignment="Center" Height="18" Width="30" RenderTransformOrigin="-0.188,0.425" Margin="98,2,65,0"/>
-                    </Grid>
-                    <Grid Grid.ColumnSpan="2" Grid.Column="1" Margin="11,100,13,150" Grid.Row="1">
-                        <ProgressBar x:Name="guild_dog" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="192" Minimum="0" Maximum="1"/>
-                        <TextBox x:Name="guild_dog_counter" TextWrapping="Wrap" Text="{Binding Value, ElementName=guild_dog}" VerticalAlignment="Center" BorderBrush="{x:Null}" Background="{x:Null}" VerticalContentAlignment="Center" RenderTransformOrigin="0,0.55" Height="20" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="85,0,95,0"/>
-                        <TextBlock x:Name="guild_dog_text" HorizontalAlignment="Center" TextWrapping="Wrap" Text="из 1" VerticalAlignment="Center" Height="18" Width="30" RenderTransformOrigin="-0.188,0.425" Margin="97,2,65,0"/>
-                    </Grid>
-                    <Grid Grid.ColumnSpan="2" Grid.Column="1" Margin="11,125,13,125" Grid.Row="1">
-                        <ProgressBar x:Name="pvp_arena" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="192"/>
-                        <TextBox x:Name="pvp_arena_counter" TextWrapping="Wrap" Text="{Binding Value, ElementName=pvp_arena}" VerticalAlignment="Center" BorderBrush="{x:Null}" Background="{x:Null}" VerticalContentAlignment="Center" RenderTransformOrigin="0,0.55" Height="20" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="85,0,95,0"/>
-                        <TextBlock x:Name="pvp_arena_text" HorizontalAlignment="Center" TextWrapping="Wrap" Text="из 1" VerticalAlignment="Center" Height="18" Width="30" RenderTransformOrigin="-0.188,0.425" Margin="97,2,65,0"/>
-                    </Grid>
-                    <Button x:Name="guil_10_x1" Content="+1" Grid.Column="3" HorizontalAlignment="Left" Height="20" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0,0.8" Click="guil_10_x1_Click"/>
-                    <Button x:Name="guil_10_x10" Content="+10" Grid.Column="3" HorizontalAlignment="Left" Height="20" Margin="42,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="27" Click="guil_10_x10_Click"/>
-                    <Frame x:Name="frame_Copy5" Content="Шпионаж(кв с доски)" HorizontalAlignment="Left" Height="20" Grid.Row="1" VerticalAlignment="Top" Width="151" Background="#FF09F509" Margin="0,100,0,0" Navigated="frame_Copy3_Navigated"/>
-                    <Grid Grid.ColumnSpan="2" Grid.Column="1" Margin="11,150,13,100" Grid.Row="1">
-                        <ProgressBar HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="192"/>
-                        <TextBox x:Name="guild_10_counter_Copy5" TextWrapping="Wrap" Text="сколько угодно" VerticalAlignment="Center" BorderBrush="{x:Null}" Background="{x:Null}" VerticalContentAlignment="Center" RenderTransformOrigin="0,0.55" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="44,0,41,0"/>
-                    </Grid>
-                    <Grid Grid.Column="1" Margin="10,0,10,250" Grid.Row="1" Grid.ColumnSpan="2">
-                        <ProgressBar HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="193" Minimum="0" Maximum="10" x:Name="guild_10"/>
-                        <TextBox x:Name="guild_10_counter" Margin="85,0,98,0" TextWrapping="Wrap" Text="{Binding ElementName=guild_10, Path=Value}" VerticalAlignment="Center" BorderBrush="{x:Null}" Background="{x:Null}" VerticalContentAlignment="Center" RenderTransformOrigin="0,0.55" Height="20" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
-                        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="из 10" VerticalAlignment="Center" Height="18" Width="30" RenderTransformOrigin="-0.188,0.425" Margin="98,2,68,0"/>
-                    </Grid>
-                    <Button x:Name="guil_build_x1" Content="+1" Grid.Column="3" HorizontalAlignment="Left" Height="20" Margin="10,25,0,0" Grid.Row="1" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0,0.8" Click="guil_build_x1_Click"/>
-                    <Button x:Name="pirate_island_x1" Content="+1" Grid.Column="3" HorizontalAlignment="Left" Height="20" Margin="10,50,0,0" Grid.Row="1" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0,0.8" Click="pirate_island_x1_Click"/>
-                    <Button x:Name="guil_build_x10" Content="+4" Grid.Column="3" HorizontalAlignment="Left" Height="20" Margin="42,25,0,0" Grid.Row="1" VerticalAlignment="Top" Width="27" Click="guil_10_x10_Click"/>
-                    <Button x:Name="pirate_island_x2" Content="+4" Grid.Column="3" HorizontalAlignment="Left" Height="20" Margin="42,50,0,0" Grid.Row="1" VerticalAlignment="Top" Width="27" Click="guil_10_x10_Click"/>
-                    <Button x:Name="pack_x1" Content="+1" Grid.Column="3" HorizontalAlignment="Left" Height="20" Margin="10,75,0,0" Grid.Row="1" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0,0.8" Click="pack_x1_Click"/>
-                    <Button x:Name="guild_dog_x1" Content="+1" Grid.Column="3" HorizontalAlignment="Left" Height="20" Margin="10,100,0,0" Grid.Row="1" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0,0.8" Click="pack_x1_Click"/>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Желательно" Background="#FF16EE0C">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
-            <TabItem Header="Минимум" Background="#FFE9F307">
-                <TabItem.FocusVisualStyle>
-                    <Style>
-                        <Setter Property="Control.Template">
-                            <Setter.Value>
-                                <ControlTemplate>
-                                    <Rectangle Margin="2" SnapsToDevicePixels="True" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </TabItem.FocusVisualStyle>
-                <Grid Background="#FFE5E5E5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="180*"/>
-                        <ColumnDefinition Width="331*"/>
-                    </Grid.ColumnDefinitions>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Доп. Возможности">
-                <TabItem.Background>
-                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                        <GradientStop Color="#FF0BF3BE" Offset="1"/>
-                    </LinearGradientBrush>
-                </TabItem.Background>
-                <Grid Background="#FFE5E5E5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="180*"/>
-                        <ColumnDefinition Width="331*"/>
-                    </Grid.ColumnDefinitions>
-                </Grid>
-            </TabItem>
-        </TabControl>
+        <StackPanel HorizontalAlignment="Left" Height="559" Margin="0,10,0,0" VerticalAlignment="Top" Width="181">
+            <local:ControlButton x:Name="necessarily" Content="Обязательно" Click="ContentControl_Click"/>
+            <local:ControlButton x:Name="minimum" Content="Минимум" Click="ContentControl_Click"/>
+            <local:ControlButton x:Name="desirable" Content="Желательно" Click="ContentControl_Click"/>
+            <local:ControlButton x:Name="additional" Content="Дополнительно" Click="ContentControl_Click"/>
+        </StackPanel>
+        <UserControl x:Name="ContentBlock" Margin="186,10,10,10">
+            <UserControl.Background>
+                <ImageBrush ImageSource="image/26274_1_miscellaneous_digital_art_cat_black_cat.jpg" Stretch="UniformToFill"/>
+            </UserControl.Background>
+        </UserControl>
     </Grid>
 </Window>

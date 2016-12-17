@@ -36,6 +36,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -54,6 +56,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,12 +68,42 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ControlButton.cs" />
+    <Compile Include="CounterButton.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\additional .xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\desirable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\minimum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\necessarily.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\additional .xaml.cs">
+      <DependentUpon>additional .xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\desirable.xaml.cs">
+      <DependentUpon>desirable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\minimum.xaml.cs">
+      <DependentUpon>minimum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\necessarily.xaml.cs">
+      <DependentUpon>necessarily.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -95,6 +131,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="image\461104843.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\geo-shapes-black-1280b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\26274_1_miscellaneous_digital_art_cat_black_cat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\murr.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
