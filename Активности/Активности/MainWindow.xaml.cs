@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using Активности.Pages;
 using System.Windows.Forms;
 using System.Drawing;
+using System.IO;
 
 namespace Активности
 {
@@ -31,8 +32,12 @@ namespace Активности
             m_notifyIcon.BalloonTipTitle = "Программа помещена в трей";
             m_notifyIcon.BalloonTipText = "Чтобы открыть программу снова, нажмите на её иконку";
             m_notifyIcon.Text = "Activiti"; //Пишется когда наводишь мышкой на программу в трее
-            m_notifyIcon.Icon = new System.Drawing.Icon(@"C:\Users\Spar9a\Documents\Visual Studio 2017\Projects\Активности_git\Активности\Активности\image\murr.ico");
-            m_notifyIcon.Click += new EventHandler(m_notifyIcon_Click);
+            using (Stream iconStream = System.Windows.Application.GetResourceStream(new Uri("pack://application:,,,/Активности;component/image/murr.ico")).Stream)
+            {
+                m_notifyIcon.Icon = new System.Drawing.Icon(iconStream);
+                m_notifyIcon.Click += new EventHandler(m_notifyIcon_Click);
+            }
+            ContentBlock.Content = new necessarily();
         }
         private WindowState m_storedWindowState = WindowState.Normal;
         void OnStateChanged(object sender, EventArgs args)
@@ -69,31 +74,6 @@ namespace Активности
             m_notifyIcon.Dispose();
             m_notifyIcon = null;
         }
-    private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void frame_Copy1_Navigated(object sender, NavigationEventArgs e)
-        {
-
-        }
-
-        private void frame_Copy3_Navigated(object sender, NavigationEventArgs e)
-        {
-
-        }
-
-        private void frame_Copy2_Navigated(object sender, NavigationEventArgs e)
-        {
-
-        }
-
-        private void tabControl_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void ContentControl_Click(object sender, RoutedEventArgs e)
         {
             var btn = sender as System.Windows.Controls.Button;
