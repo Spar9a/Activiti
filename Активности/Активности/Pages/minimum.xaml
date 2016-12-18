@@ -1,282 +1,273 @@
-﻿<UserControl
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Активности.Pages"
-      xmlns:Активности="clr-namespace:Активности" x:Class="Активности.Pages.minimum"
-      mc:Ignorable="d" 
-      d:DesignHeight="1549" d:DesignWidth="896">
-
-    <ListView x:Name="listView" Width="896" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
-        <ListView.View>
-            <GridView>
-                <GridViewColumn/>
-            </GridView>
-        </ListView.View>
-        <Grid Width="886">
-
-            <Grid Margin="20,20,656,318" OpacityMask="Black">
-                <Grid.Background>
-                    <SolidColorBrush Color="#FF8B8B8B" Opacity="0.3"/>
-                </Grid.Background>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2"/>
-                <Label x:Name="guild_10_label" Content="Гильдийные квесты" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" FontSize="20" FontFamily="Segoe Print" FontWeight="Bold" Width="218" Grid.ColumnSpan="2" Margin="1,1,0,0">
-                    <Label.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
-                            <GradientStop Color="Black" Offset="1"/>
-                            <GradientStop Color="#FFC10000" Offset="0.527"/>
-                        </LinearGradientBrush>
-                    </Label.Background>
-                </Label>
-                <ProgressBar x:Name="guild_10" Height="40" Margin="0,51,0,0" VerticalAlignment="Top" Minimum="0" Maximum="10" HorizontalContentAlignment="Stretch" UseLayoutRounding="False" Grid.ColumnSpan="2" BorderBrush="Black">
-                    <ProgressBar.Foreground>
-                        <SolidColorBrush Color="#FF06B025" Opacity="0.3"/>
-                    </ProgressBar.Foreground>
-                    <ProgressBar.Background>
-                        <SolidColorBrush Color="#FFE6E6E6" Opacity="0.3"/>
-                    </ProgressBar.Background>
-                </ProgressBar>
-                <Активности:CounterButton x:Name="guild_x10_minuse" Content="-" Margin="10,62,76,113" Click="guild_x10_minuse_Click" Height="Auto" Width="Auto" />
-                <Активности:CounterButton x:Name="guild_x10_pluse" Content="+" Margin="74,62,10,113" Click="guild_x10_pluse_Click" Grid.Column="1" Height="Auto" Width="Auto"/>
-                <Label x:Name="guild_10_counter" HorizontalAlignment="Center" Margin="70,40,70,99" Width="80" FontSize="18" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Grid.ColumnSpan="2"/>
-                <Label x:Name="label" Content="Тип квеста:" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" Height="26" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label1" Content="Ежедневный" Grid.Column="1" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label2" Content="Расположение:" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label3" Content="База гильдии" Grid.Column="1" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label4" Content="НПС:" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label5" Content="Трактирщик" Grid.Column="1" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label6" Content="До обновления:" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label7" Content="24:33" Grid.Column="1" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-            </Grid>
-            <Grid Margin="320,20,356,318" OpacityMask="Black">
-                <Grid.Background>
-                    <SolidColorBrush Color="#FF8B8B8B" Opacity="0.3"/>
-                </Grid.Background>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2"/>
-                <Label x:Name="guild_10_label1" Content="Гильдийные квесты" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" FontSize="20" FontFamily="Segoe Print" FontWeight="Bold" Width="218" Grid.ColumnSpan="2" Margin="1,1,0,0">
-                    <Label.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
-                            <GradientStop Color="Black" Offset="1"/>
-                            <GradientStop Color="#FFC10000" Offset="0.527"/>
-                        </LinearGradientBrush>
-                    </Label.Background>
-                </Label>
-                <ProgressBar x:Name="guild_1" Height="40" Margin="0,51,0,0" VerticalAlignment="Top" Minimum="0" Maximum="10" HorizontalContentAlignment="Stretch" UseLayoutRounding="False" Grid.ColumnSpan="2" BorderBrush="Black">
-                    <ProgressBar.Foreground>
-                        <SolidColorBrush Color="#FF06B025" Opacity="0.3"/>
-                    </ProgressBar.Foreground>
-                    <ProgressBar.Background>
-                        <SolidColorBrush Color="#FFE6E6E6" Opacity="0.3"/>
-                    </ProgressBar.Background>
-                </ProgressBar>
-                <Активности:CounterButton x:Name="guild_x10_minuse1" Content="-" Margin="10,62,76,113" Click="guild_x10_minuse_Click" Height="Auto" Width="Auto" />
-                <Активности:CounterButton x:Name="guild_x10_pluse1" Content="+" Margin="74,62,10,113" Click="guild_x10_pluse_Click" Grid.Column="1" Height="Auto" Width="Auto"/>
-                <Label x:Name="guild_10_counter1" HorizontalAlignment="Center" Margin="70,40,70,99" Width="80" FontSize="18" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Grid.ColumnSpan="2"/>
-                <Label x:Name="label8" Content="Тип квеста:" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" Height="26" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label9" Content="Ежедневный" Grid.Column="1" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label10" Content="Расположение:" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label11" Content="База гильдии" Grid.Column="1" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label12" Content="НПС:" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label13" Content="Трактирщик" Grid.Column="1" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label14" Content="До обновления:" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label15" Content="24:33" Grid.Column="1" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-            </Grid>
-            <Grid Margin="641,20,35,318" OpacityMask="Black">
-                <Grid.Background>
-                    <SolidColorBrush Color="#FF8B8B8B" Opacity="0.3"/>
-                </Grid.Background>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2"/>
-                <Label x:Name="guild_10_label2" Content="Гильдийные квесты" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" FontSize="20" FontFamily="Segoe Print" FontWeight="Bold" Width="218" Grid.ColumnSpan="2" Margin="1,1,0,0">
-                    <Label.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
-                            <GradientStop Color="Black" Offset="1"/>
-                            <GradientStop Color="#FFC10000" Offset="0.527"/>
-                        </LinearGradientBrush>
-                    </Label.Background>
-                </Label>
-                <ProgressBar x:Name="guild_2" Height="40" Margin="0,51,0,0" VerticalAlignment="Top" Minimum="0" Maximum="10" HorizontalContentAlignment="Stretch" UseLayoutRounding="False" Grid.ColumnSpan="2" BorderBrush="Black">
-                    <ProgressBar.Foreground>
-                        <SolidColorBrush Color="#FF06B025" Opacity="0.3"/>
-                    </ProgressBar.Foreground>
-                    <ProgressBar.Background>
-                        <SolidColorBrush Color="#FFE6E6E6" Opacity="0.3"/>
-                    </ProgressBar.Background>
-                </ProgressBar>
-                <Активности:CounterButton x:Name="guild_x10_minuse2" Content="-" Margin="10,62,76,113" Click="guild_x10_minuse_Click" Height="Auto" Width="Auto" />
-                <Активности:CounterButton x:Name="guild_x10_pluse2" Content="+" Margin="74,62,10,113" Click="guild_x10_pluse_Click" Grid.Column="1" Height="Auto" Width="Auto"/>
-                <Label x:Name="guild_10_counter2" HorizontalAlignment="Center" Margin="70,40,70,99" Width="80" FontSize="18" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Grid.ColumnSpan="2"/>
-                <Label x:Name="label16" Content="Тип квеста:" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" Height="26" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label17" Content="Ежедневный" Grid.Column="1" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label18" Content="Расположение:" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label19" Content="База гильдии" Grid.Column="1" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label20" Content="НПС:" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label21" Content="Трактирщик" Grid.Column="1" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label22" Content="До обновления:" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label23" Content="24:33" Grid.Column="1" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-            </Grid>
-            <Grid Margin="20,309,656,29" OpacityMask="Black">
-                <Grid.Background>
-                    <SolidColorBrush Color="#FF8B8B8B" Opacity="0.3"/>
-                </Grid.Background>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2"/>
-                <Label x:Name="guild_10_label3" Content="Гильдийные квесты" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" FontSize="20" FontFamily="Segoe Print" FontWeight="Bold" Width="218" Grid.ColumnSpan="2" Margin="1,1,0,0">
-                    <Label.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
-                            <GradientStop Color="Black" Offset="1"/>
-                            <GradientStop Color="#FFC10000" Offset="0.527"/>
-                        </LinearGradientBrush>
-                    </Label.Background>
-                </Label>
-                <ProgressBar x:Name="guild_3" Height="40" Margin="0,51,0,0" VerticalAlignment="Top" Minimum="0" Maximum="10" HorizontalContentAlignment="Stretch" UseLayoutRounding="False" Grid.ColumnSpan="2" BorderBrush="Black">
-                    <ProgressBar.Foreground>
-                        <SolidColorBrush Color="#FF06B025" Opacity="0.3"/>
-                    </ProgressBar.Foreground>
-                    <ProgressBar.Background>
-                        <SolidColorBrush Color="#FFE6E6E6" Opacity="0.3"/>
-                    </ProgressBar.Background>
-                </ProgressBar>
-                <Активности:CounterButton x:Name="guild_x10_minuse3" Content="-" Margin="10,62,76,113" Click="guild_x10_minuse_Click" Height="Auto" Width="Auto" />
-                <Активности:CounterButton x:Name="guild_x10_pluse3" Content="+" Margin="74,62,10,113" Click="guild_x10_pluse_Click" Grid.Column="1" Height="Auto" Width="Auto"/>
-                <Label x:Name="guild_10_counter3" HorizontalAlignment="Center" Margin="70,40,70,99" Width="80" FontSize="18" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Grid.ColumnSpan="2"/>
-                <Label x:Name="label24" Content="Тип квеста:" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" Height="26" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label25" Content="Ежедневный" Grid.Column="1" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label26" Content="Расположение:" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label27" Content="База гильдии" Grid.Column="1" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label28" Content="НПС:" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label29" Content="Трактирщик" Grid.Column="1" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label30" Content="До обновления:" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label31" Content="24:33" Grid.Column="1" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-            </Grid>
-            <Grid Margin="320,309,356,29" OpacityMask="Black">
-                <Grid.Background>
-                    <SolidColorBrush Color="#FF8B8B8B" Opacity="0.3"/>
-                </Grid.Background>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2"/>
-                <Label x:Name="guild_10_label4" Content="Гильдийные квесты" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" FontSize="20" FontFamily="Segoe Print" FontWeight="Bold" Width="218" Grid.ColumnSpan="2" Margin="1,1,0,0">
-                    <Label.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
-                            <GradientStop Color="Black" Offset="1"/>
-                            <GradientStop Color="#FFC10000" Offset="0.527"/>
-                        </LinearGradientBrush>
-                    </Label.Background>
-                </Label>
-                <ProgressBar x:Name="guild_4" Height="40" Margin="0,51,0,0" VerticalAlignment="Top" Minimum="0" Maximum="10" HorizontalContentAlignment="Stretch" UseLayoutRounding="False" Grid.ColumnSpan="2" BorderBrush="Black">
-                    <ProgressBar.Foreground>
-                        <SolidColorBrush Color="#FF06B025" Opacity="0.3"/>
-                    </ProgressBar.Foreground>
-                    <ProgressBar.Background>
-                        <SolidColorBrush Color="#FFE6E6E6" Opacity="0.3"/>
-                    </ProgressBar.Background>
-                </ProgressBar>
-                <Активности:CounterButton x:Name="guild_x10_minuse4" Content="-" Margin="10,62,76,113" Click="guild_x10_minuse_Click" Height="Auto" Width="Auto" />
-                <Активности:CounterButton x:Name="guild_x10_pluse4" Content="+" Margin="74,62,10,113" Click="guild_x10_pluse_Click" Grid.Column="1" Height="Auto" Width="Auto"/>
-                <Label x:Name="guild_10_counter4" HorizontalAlignment="Center" Margin="70,40,70,99" Width="80" FontSize="18" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Grid.ColumnSpan="2"/>
-                <Label x:Name="label32" Content="Тип квеста:" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" Height="26" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label33" Content="Ежедневный" Grid.Column="1" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label34" Content="Расположение:" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label35" Content="База гильдии" Grid.Column="1" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label36" Content="НПС:" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label37" Content="Трактирщик" Grid.Column="1" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label38" Content="До обновления:" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label39" Content="24:33" Grid.Column="1" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-            </Grid>
-            <Grid Margin="641,309,35,29" OpacityMask="Black">
-                <Grid.Background>
-                    <SolidColorBrush Color="#FF8B8B8B" Opacity="0.3"/>
-                </Grid.Background>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2"/>
-                <Label x:Name="guild_10_label5" Content="Гильдийные квесты" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" FontSize="20" FontFamily="Segoe Print" FontWeight="Bold" Width="218" Grid.ColumnSpan="2" Margin="1,1,0,0">
-                    <Label.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
-                            <GradientStop Color="Black" Offset="1"/>
-                            <GradientStop Color="#FFC10000" Offset="0.527"/>
-                        </LinearGradientBrush>
-                    </Label.Background>
-                </Label>
-                <ProgressBar x:Name="guild_5" Height="40" Margin="0,51,0,0" VerticalAlignment="Top" Minimum="0" Maximum="10" HorizontalContentAlignment="Stretch" UseLayoutRounding="False" Grid.ColumnSpan="2" BorderBrush="Black">
-                    <ProgressBar.Foreground>
-                        <SolidColorBrush Color="#FF06B025" Opacity="0.3"/>
-                    </ProgressBar.Foreground>
-                    <ProgressBar.Background>
-                        <SolidColorBrush Color="#FFE6E6E6" Opacity="0.3"/>
-                    </ProgressBar.Background>
-                </ProgressBar>
-                <Активности:CounterButton x:Name="guild_x10_minuse5" Content="-" Margin="10,62,76,113" Click="guild_x10_minuse_Click" Height="Auto" Width="Auto" />
-                <Активности:CounterButton x:Name="guild_x10_pluse5" Content="+" Margin="74,62,10,113" Click="guild_x10_pluse_Click" Grid.Column="1" Height="Auto" Width="Auto"/>
-                <Label x:Name="guild_10_counter5" HorizontalAlignment="Center" Margin="70,40,70,99" Width="80" FontSize="18" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Grid.ColumnSpan="2"/>
-                <Label x:Name="label40" Content="Тип квеста:" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" Height="26" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label41" Content="Ежедневный" Grid.Column="1" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label42" Content="Расположение:" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label43" Content="База гильдии" Grid.Column="1" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label44" Content="НПС:" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label45" Content="Трактирщик" Grid.Column="1" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label46" Content="До обновления:" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label47" Content="24:33" Grid.Column="1" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-            </Grid>
-            <Grid Margin="20,603,656,-265" OpacityMask="Black">
-                <Grid.Background>
-                    <SolidColorBrush Color="#FF8B8B8B" Opacity="0.3"/>
-                </Grid.Background>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0*"/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="3"/>
-                <Label x:Name="guild_10_label6" Content="Гильдийные квесты" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" FontSize="20" FontFamily="Segoe Print" FontWeight="Bold" Width="218" Grid.ColumnSpan="3" Margin="1,1,0,0">
-                    <Label.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
-                            <GradientStop Color="Black" Offset="1"/>
-                            <GradientStop Color="#FFC10000" Offset="0.527"/>
-                        </LinearGradientBrush>
-                    </Label.Background>
-                </Label>
-                <ProgressBar x:Name="guild_6" Height="40" Margin="0,51,0,0" VerticalAlignment="Top" Minimum="0" Maximum="10" HorizontalContentAlignment="Stretch" UseLayoutRounding="False" Grid.ColumnSpan="3" BorderBrush="Black">
-                    <ProgressBar.Foreground>
-                        <SolidColorBrush Color="#FF06B025" Opacity="0.3"/>
-                    </ProgressBar.Foreground>
-                    <ProgressBar.Background>
-                        <SolidColorBrush Color="#FFE6E6E6" Opacity="0.3"/>
-                    </ProgressBar.Background>
-                </ProgressBar>
-                <Активности:CounterButton x:Name="guild_x10_minuse6" Content="-" Margin="10,62,76,113" Click="guild_x10_minuse_Click" Height="Auto" Width="Auto" Grid.ColumnSpan="2" />
-                <Активности:CounterButton x:Name="guild_x10_pluse6" Content="+" Margin="74,62,10,113" Click="guild_x10_pluse_Click" Grid.Column="2" Height="Auto" Width="Auto"/>
-                <Label x:Name="guild_10_counter6" HorizontalAlignment="Center" Margin="70,40,70,99" Width="80" FontSize="18" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Grid.ColumnSpan="3"/>
-                <Label x:Name="label48" Content="Тип квеста:" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" Height="26" FontFamily="Segoe Print" FontWeight="Bold" Grid.ColumnSpan="2"/>
-                <Label x:Name="label49" Content="Ежедневный" Grid.Column="2" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label50" Content="Расположение:" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold" Grid.ColumnSpan="2"/>
-                <Label x:Name="label51" Content="База гильдии" Grid.Column="2" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label52" Content="НПС:" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold" Grid.ColumnSpan="2"/>
-                <Label x:Name="label53" Content="Трактирщик" Grid.Column="2" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-                <Label x:Name="label54" Content="До обновления:" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold" Grid.ColumnSpan="2"/>
-                <Label x:Name="label55" Content="24:33" Grid.Column="2" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
-            </Grid>
-
+﻿<UserControl x:Class="Активности.Pages.minimum"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Активности"
+             mc:Ignorable="d" 
+             d:DesignHeight="549" d:DesignWidth="896">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Margin="20,20,654,318" OpacityMask="Black">
+            <Grid.Background>
+                <SolidColorBrush Color="#FF8B8B8B" Opacity="0.3"/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2"/>
+            <Label x:Name="guild_10_label" Content="Гильдийные квесты" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" FontSize="20" FontFamily="Segoe Print" FontWeight="Bold" Width="218" Grid.ColumnSpan="2" Margin="1,1,0,0">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FFC10000" Offset="0.527"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <ProgressBar x:Name="guild_10" Height="40" Margin="0,51,0,0" VerticalAlignment="Top" Minimum="0" Maximum="10" HorizontalContentAlignment="Stretch" UseLayoutRounding="False" Grid.ColumnSpan="2" BorderBrush="Black">
+                <ProgressBar.Foreground>
+                    <SolidColorBrush Color="#FF06B025" Opacity="0.3"/>
+                </ProgressBar.Foreground>
+                <ProgressBar.Background>
+                    <SolidColorBrush Color="#FFE6E6E6" Opacity="0.3"/>
+                </ProgressBar.Background>
+            </ProgressBar>
+            <local:CounterButton x:Name="guild_x10_minuse" Content="-" Margin="10,62,76,113" Click="guild_x10_minuse_Click" Height="Auto" Width="Auto" />
+            <local:CounterButton x:Name="guild_x10_pluse" Content="+" Margin="74,62,10,113" Click="guild_x10_pluse_Click" Grid.Column="1" Height="Auto" Width="Auto"/>
+            <Label x:Name="guild_10_counter" HorizontalAlignment="Center" Margin="70,40,70,99" Width="80" FontSize="18" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Grid.ColumnSpan="2"/>
+            <Label x:Name="label" Content="Тип квеста:" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" Height="26" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label1" Content="Ежедневный" Grid.Column="1" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label2" Content="Расположение:" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label3" Content="База гильдии" Grid.Column="1" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label4" Content="НПС:" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label5" Content="Трактирщик" Grid.Column="1" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label6" Content="До обновления:" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label7" Content="24:33" Grid.Column="1" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
         </Grid>
-    </ListView>
+        <Grid Margin="340,20,336,318">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2">
+                <Border.Background>
+                    <SolidColorBrush Color="#FF8B8B8B" Opacity="0.3"/>
+                </Border.Background>
+            </Border>
+            <Label x:Name="guild_10_label1" Content="Ги квест стройка" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" FontSize="20" FontFamily="Segoe Print" FontWeight="Bold" Width="218" Grid.ColumnSpan="2" Margin="1,1,0,0">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FFC10000" Offset="0.527"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <ProgressBar x:Name="guild_build" Height="40" Margin="0,51,0,0" VerticalAlignment="Top" Minimum="0" Maximum="1" HorizontalContentAlignment="Stretch" UseLayoutRounding="False" Grid.ColumnSpan="2" BorderBrush="Black">
+                <ProgressBar.Foreground>
+                    <SolidColorBrush Color="#FF06B025" Opacity="0.3"/>
+                </ProgressBar.Foreground>
+                <ProgressBar.Background>
+                    <SolidColorBrush Color="#FFE6E6E6" Opacity="0.3"/>
+                </ProgressBar.Background>
+            </ProgressBar>
+            <local:CounterButton x:Name="guild_build_minuse" Content="-" Margin="10,62,76,113" Click="guild_build_minuse_Click" Height="Auto" Width="Auto" />
+            <local:CounterButton x:Name="guild_build_pluse" Content="+" Margin="74,62,10,113" Click="guild_build_pluse_Click" Grid.Column="1" Height="Auto" Width="Auto"/>
+            <Label x:Name="guild_build_counter" HorizontalAlignment="Center" Margin="70,40,70,99" Width="80" FontSize="18" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Grid.ColumnSpan="2"/>
+            <Label x:Name="label8" Content="Тип квеста:" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" Height="26" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label9" Content="Ежедневный" Grid.Column="1" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label10" Content="Расположение:" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label11" Content="База гильдии" Grid.Column="1" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label12" Content="НПС:" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label13" Content="Трактирщик" Grid.Column="1" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label14" Content="До обновления:" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label15" Content="24:33" Grid.Column="1" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+        </Grid>
+        <Grid Margin="662,20,16,318">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2">
+                <Border.Background>
+                    <SolidColorBrush Color="#FF8B8B8B" Opacity="0.3"/>
+                </Border.Background>
+            </Border>
+            <Label x:Name="pirate_islandlabel" Content="Пиратский остров" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" FontSize="20" FontFamily="Segoe Print" FontWeight="Bold" Width="218" Grid.ColumnSpan="2" Margin="1,1,0,0">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FFC10000" Offset="0.527"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <ProgressBar x:Name="pirate_island" Height="40" Margin="0,51,0,0" VerticalAlignment="Top" Minimum="0" Maximum="2" HorizontalContentAlignment="Stretch" UseLayoutRounding="False" Grid.ColumnSpan="2" BorderBrush="Black">
+                <ProgressBar.Foreground>
+                    <SolidColorBrush Color="#FF06B025" Opacity="0.3"/>
+                </ProgressBar.Foreground>
+                <ProgressBar.Background>
+                    <SolidColorBrush Color="#FFE6E6E6" Opacity="0.3"/>
+                </ProgressBar.Background>
+            </ProgressBar>
+            <local:CounterButton x:Name="pirate_island_minuse" Content="-" Margin="10,62,76,113" Click="pirate_island_minuse_Click" Height="Auto" Width="Auto" />
+            <local:CounterButton x:Name="pirate_island_pluse" Content="+" Margin="74,62,10,113" Click="pirate_island_pluse_Click" Grid.Column="1" Height="Auto" Width="Auto"/>
+            <Label x:Name="pirate_island_counter" HorizontalAlignment="Center" Margin="70,40,70,99" Width="80" FontSize="18" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Grid.ColumnSpan="2"/>
+            <Label x:Name="label16" Content="Тип квеста:" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" Height="26" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label17" Content="Ежедневный" Grid.Column="1" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label18" Content="Расположение:" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label19" Content="База гильдии" Grid.Column="1" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label20" Content="НПС:" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label21" Content="Трактирщик" Grid.Column="1" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label22" Content="До обновления:" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label23" Content="24:33" Grid.Column="1" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+        </Grid>
+        <Grid Margin="20,280,654,58" OpacityMask="Black">
+            <Grid.Background>
+                <SolidColorBrush Color="#FF8B8B8B" Opacity="0.3"/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2"/>
+            <Label x:Name="guild_10_label2" Content="Гильдийные квесты" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" FontSize="20" FontFamily="Segoe Print" FontWeight="Bold" Width="218" Grid.ColumnSpan="2" Margin="1,1,0,0">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FFC10000" Offset="0.527"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <ProgressBar x:Name="guild_1" Height="40" Margin="0,51,0,0" VerticalAlignment="Top" Minimum="0" Maximum="10" HorizontalContentAlignment="Stretch" UseLayoutRounding="False" Grid.ColumnSpan="2" BorderBrush="Black">
+                <ProgressBar.Foreground>
+                    <SolidColorBrush Color="#FF06B025" Opacity="0.3"/>
+                </ProgressBar.Foreground>
+                <ProgressBar.Background>
+                    <SolidColorBrush Color="#FFE6E6E6" Opacity="0.3"/>
+                </ProgressBar.Background>
+            </ProgressBar>
+            <local:CounterButton x:Name="guild_x10_minuse1" Content="-" Margin="10,62,76,113" Click="guild_x10_minuse_Click" Height="Auto" Width="Auto" />
+            <local:CounterButton x:Name="guild_x10_pluse1" Content="+" Margin="74,62,10,113" Click="guild_x10_pluse_Click" Grid.Column="1" Height="Auto" Width="Auto"/>
+            <Label x:Name="guild_10_counter1" HorizontalAlignment="Center" Margin="70,40,70,99" Width="80" FontSize="18" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Grid.ColumnSpan="2"/>
+            <Label x:Name="label24" Content="Тип квеста:" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" Height="26" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label25" Content="Ежедневный" Grid.Column="1" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label26" Content="Расположение:" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label27" Content="База гильдии" Grid.Column="1" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label28" Content="НПС:" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label29" Content="Трактирщик" Grid.Column="1" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label30" Content="До обновления:" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label31" Content="24:33" Grid.Column="1" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+        </Grid>
+        <Grid Margin="340,280,336,58">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2">
+                <Border.Background>
+                    <SolidColorBrush Color="#FF8B8B8B" Opacity="0.3"/>
+                </Border.Background>
+            </Border>
+            <Label x:Name="guild_10_label3" Content="Ги квест стройка" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" FontSize="20" FontFamily="Segoe Print" FontWeight="Bold" Width="218" Grid.ColumnSpan="2" Margin="1,1,0,0">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FFC10000" Offset="0.527"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <ProgressBar x:Name="guild_build1" Height="40" Margin="0,51,0,0" VerticalAlignment="Top" Minimum="0" Maximum="1" HorizontalContentAlignment="Stretch" UseLayoutRounding="False" Grid.ColumnSpan="2" BorderBrush="Black">
+                <ProgressBar.Foreground>
+                    <SolidColorBrush Color="#FF06B025" Opacity="0.3"/>
+                </ProgressBar.Foreground>
+                <ProgressBar.Background>
+                    <SolidColorBrush Color="#FFE6E6E6" Opacity="0.3"/>
+                </ProgressBar.Background>
+            </ProgressBar>
+            <local:CounterButton x:Name="guild_build_minuse1" Content="-" Margin="10,62,76,113" Click="guild_build_minuse_Click" Height="Auto" Width="Auto" />
+            <local:CounterButton x:Name="guild_build_pluse1" Content="+" Margin="74,62,10,113" Click="guild_build_pluse_Click" Grid.Column="1" Height="Auto" Width="Auto"/>
+            <Label x:Name="guild_build_counter1" HorizontalAlignment="Center" Margin="70,40,70,99" Width="80" FontSize="18" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Grid.ColumnSpan="2"/>
+            <Label x:Name="label32" Content="Тип квеста:" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" Height="26" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label33" Content="Ежедневный" Grid.Column="1" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label34" Content="Расположение:" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label35" Content="База гильдии" Grid.Column="1" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label36" Content="НПС:" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label37" Content="Трактирщик" Grid.Column="1" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label38" Content="До обновления:" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label39" Content="24:33" Grid.Column="1" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+        </Grid>
+        <Grid Margin="662,280,16,58">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2">
+                <Border.Background>
+                    <SolidColorBrush Color="#FF8B8B8B" Opacity="0.3"/>
+                </Border.Background>
+            </Border>
+            <Label x:Name="pirate_islandlabel1" Content="Пиратский остров" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" FontSize="20" FontFamily="Segoe Print" FontWeight="Bold" Width="218" Grid.ColumnSpan="2" Margin="1,1,0,0">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FFC10000" Offset="0.527"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <ProgressBar x:Name="pirate_island1" Height="40" Margin="0,51,0,0" VerticalAlignment="Top" Minimum="0" Maximum="2" HorizontalContentAlignment="Stretch" UseLayoutRounding="False" Grid.ColumnSpan="2" BorderBrush="Black">
+                <ProgressBar.Foreground>
+                    <SolidColorBrush Color="#FF06B025" Opacity="0.3"/>
+                </ProgressBar.Foreground>
+                <ProgressBar.Background>
+                    <SolidColorBrush Color="#FFE6E6E6" Opacity="0.3"/>
+                </ProgressBar.Background>
+            </ProgressBar>
+            <local:CounterButton x:Name="pirate_island_minuse1" Content="-" Margin="10,62,76,113" Click="pirate_island_minuse_Click" Height="Auto" Width="Auto" />
+            <local:CounterButton x:Name="pirate_island_pluse1" Content="+" Margin="74,62,10,113" Click="pirate_island_pluse_Click" Grid.Column="1" Height="Auto" Width="Auto"/>
+            <Label x:Name="pirate_island_counter1" HorizontalAlignment="Center" Margin="70,40,70,99" Width="80" FontSize="18" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Grid.ColumnSpan="2"/>
+            <Label x:Name="label40" Content="Тип квеста:" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" Height="26" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label41" Content="Ежедневный" Grid.Column="1" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label42" Content="Расположение:" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label43" Content="База гильдии" Grid.Column="1" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label44" Content="НПС:" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label45" Content="Трактирщик" Grid.Column="1" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label46" Content="До обновления:" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+            <Label x:Name="label47" Content="24:33" Grid.Column="1" HorizontalAlignment="Left" Margin="0,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Segoe Print" FontWeight="Bold"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="47" Margin="313,496,0,0" VerticalAlignment="Top" Width="274">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="135*"/>
+                <ColumnDefinition Width="139*"/>
+            </Grid.ColumnDefinitions>
+            <Border BorderThickness="2" HorizontalAlignment="Left" Height="27" Margin="72,3,0,0" VerticalAlignment="Top" Width="28" CornerRadius="50">
+                <Border.BorderBrush>
+                    <SolidColorBrush Color="Black"/>
+                </Border.BorderBrush>
+                <Border.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Border.Background>
+            </Border>
+            <local:PageButton x:Name="page_1" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Height="43" Margin="71,0,0,0" Foreground="Black" Background="#FFDDDDDD"/>
+            <local:PageButton x:Name="page_2" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="28" Height="43" Margin="105,0,0,0"/>
+            <local:PageButton x:Name="page_3" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="28" Height="43" Margin="3,0,0,0" Grid.Column="1"/>
+            <local:PageButton x:Name="page_4" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="43" Margin="36,0,0,0" Grid.Column="1"/>
+            <Border BorderThickness="2" HorizontalAlignment="Left" Height="27" Margin="105,3,0,0" VerticalAlignment="Top" Width="28" CornerRadius="50" BorderBrush="Black">
+                <Border.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Border.Background>
+            </Border>
+            <Border BorderThickness="2" HorizontalAlignment="Left" Height="27" Margin="3,3,0,0" VerticalAlignment="Top" Width="28" CornerRadius="50" BorderBrush="Black" Grid.Column="1">
+                <Border.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Border.Background>
+            </Border>
+            <Border BorderThickness="2" HorizontalAlignment="Left" Height="27" Margin="38,3,0,0" VerticalAlignment="Top" Width="28" CornerRadius="50" BorderBrush="Black" Grid.Column="1">
+                <Border.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Border.Background>
+            </Border>
+        </Grid>
+    </Grid>
 </UserControl>

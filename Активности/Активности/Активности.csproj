@@ -92,6 +92,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PageButton.cs" />
     <Compile Include="Pages\additional .xaml.cs">
       <DependentUpon>additional .xaml</DependentUpon>
     </Compile>

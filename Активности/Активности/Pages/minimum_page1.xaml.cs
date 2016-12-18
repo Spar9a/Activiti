@@ -13,22 +13,28 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Активности.Pages
+namespace Активности.Page
 {
     /// <summary>
-    /// Логика взаимодействия для minimum.xaml
+    /// Логика взаимодействия для minimum_page1.xaml
     /// </summary>
-    public partial class minimum : UserControl
+    public partial class minimum_page1 : UserControl
     {
-        public static object ContentBlock { get; private set; }
+        public object ContentBlock { get; private set; }
 
-        public minimum()
+        public minimum_page1()
         {
             InitializeComponent();
             guild_counter();
             build_counter();
             pirate_counter();
         }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
+        }
+
         private void guild_x10_pluse_Click(object sender, RoutedEventArgs e)
         {
             guild_10.Value++;
@@ -88,28 +94,6 @@ namespace Активности.Pages
                 pirate_island_counter.Content = pirate_island_count;
             }));
         }
-        private void ContentControl_Click(object sender, RoutedEventArgs e)
-        {
-            var btn = sender as System.Windows.Controls.Button;
-            string name = btn.Name;
-            switch (name)
-            {
-                case "necessarily":
-                    get{ return (Convert)GetValue(ContentBlock); }
-                    set{ SetValue(Content, new desirable()); }
-                    break;
-                case "additional":
-                    ContentBlock.Content = new additional();
-                    break;
-                case "desirable":
-                    ContentBlock.Content = new desirable();
-                    break;
-                case "minimum":
-                    ContentBlock.Content = new minimum();
-                    break;
-                default:
-                    break;
-            }
-        }
+        
     }
 }
