@@ -103,6 +103,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Additionaly.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Desirable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Minimum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Necessary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -111,6 +123,15 @@
   <ItemGroup>
     <Compile Include="PageButton.xaml.cs">
       <DependentUpon>PageButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Additionaly.xaml.cs">
+      <DependentUpon>Additionaly.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Desirable.xaml.cs">
+      <DependentUpon>Desirable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Minimum.xaml.cs">
+      <DependentUpon>Minimum.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Necessary.xaml.cs">
       <DependentUpon>Necessary.xaml</DependentUpon>

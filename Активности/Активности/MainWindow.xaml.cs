@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
+using Активности.Pages;
 
 namespace Активности
 {
@@ -36,6 +37,7 @@ namespace Активности
                 m_notifyIcon.Icon = new System.Drawing.Icon(iconStream);
                 m_notifyIcon.Click += new EventHandler(m_notifyIcon_Click);
             }
+            ContentBlock.Content = new Necessary();
         }
         private WindowState m_storedWindowState = WindowState.Normal;
         void OnStateChanged(object sender, EventArgs args)
