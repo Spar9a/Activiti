@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Активности.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для page4Minimum.xaml
+    /// Логика взаимодействия для Necessary.xaml
     /// </summary>
-    public partial class page4Minimum : UserControl
+    public partial class Necessary : UserControl
     {
-        public page4Minimum()
+        public Necessary()
         {
             InitializeComponent();
         }

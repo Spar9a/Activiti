@@ -103,31 +103,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\additional .xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\desirable.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\minimum.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\necessarily.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\page2Minimum.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\page3Minimum.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\page4Minimum.xaml">
+    <Page Include="Pages\Necessary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,26 +112,8 @@
     <Compile Include="PageButton.xaml.cs">
       <DependentUpon>PageButton.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\additional .xaml.cs">
-      <DependentUpon>additional .xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\desirable.xaml.cs">
-      <DependentUpon>desirable.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\minimum.xaml.cs">
-      <DependentUpon>minimum.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\necessarily.xaml.cs">
-      <DependentUpon>necessarily.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\page2Minimum.xaml.cs">
-      <DependentUpon>page2Minimum.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\page3Minimum.xaml.cs">
-      <DependentUpon>page3Minimum.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\page4Minimum.xaml.cs">
-      <DependentUpon>page4Minimum.xaml</DependentUpon>
+    <Compile Include="Pages\Necessary.xaml.cs">
+      <DependentUpon>Necessary.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -201,5 +159,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

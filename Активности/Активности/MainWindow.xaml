@@ -6,21 +6,19 @@
         xmlns:local="clr-namespace:Активности"
         xmlns:PerformanceData="clr-namespace:System.Diagnostics.PerformanceData;assembly=System.Core" x:Class="Активности.MainWindow"
         mc:Ignorable="d"
-        Title="Activiti" Height="600" Width="1100" Background="#FF3F3F46"
+        Title="Activiti" Height="700" Width="620" Background="#FF3F3F46"
         StateChanged = "OnStateChanged"
         IsVisibleChanged = "OnIsVisibleChanged"
-        Closing = "Window_Closing">
-    <Grid>
-        <StackPanel HorizontalAlignment="Left" Height="559" Margin="0,10,0,0" VerticalAlignment="Top" Width="181">
-            <local:ControlButton x:Name="necessarily" Content="Обязательно" Click="ContentControl_Click"/>
-            <local:ControlButton x:Name="minimum" Content="Минимум" Click="ContentControl_Click"/>
-            <local:ControlButton x:Name="desirable" Content="Желательно" Click="ContentControl_Click"/>
-            <local:ControlButton x:Name="additional" Content="Дополнительно" Click="ContentControl_Click"/>
+        Closing = "Window_Closing" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+    <Grid x:Name="Grid" Margin="-4,0">
+        <StackPanel x:Name="Controler" Height="100" Orientation="Horizontal" ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,0">
+            <Button Content="Button" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="100"/>
+            <Button Content="Button" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="100"/>
+            <Button Content="Button" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="100"/>
+            <Button Content="Button" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="100"/>
+            <Button Content="Button" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="100"/>
+            <Button Content="Button" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="100"/>
         </StackPanel>
-        <UserControl x:Name="ContentBlock" Margin="186,10,10,10">
-            <UserControl.Background>
-                <ImageBrush ImageSource="image/26274_1_miscellaneous_digital_art_cat_black_cat.jpg" Stretch="UniformToFill"/>
-            </UserControl.Background>
-        </UserControl>
+        <StackPanel x:Name="ContentBlock" Margin="10,105,10,0"/>
     </Grid>
 </Window>

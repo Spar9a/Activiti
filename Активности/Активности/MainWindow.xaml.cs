@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Активности.Pages;
 using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
@@ -37,7 +36,6 @@ namespace Активности
                 m_notifyIcon.Icon = new System.Drawing.Icon(iconStream);
                 m_notifyIcon.Click += new EventHandler(m_notifyIcon_Click);
             }
-            ContentBlock.Content = new necessarily();
         }
         private WindowState m_storedWindowState = WindowState.Normal;
         void OnStateChanged(object sender, EventArgs args)
@@ -74,25 +72,6 @@ namespace Активности
             m_notifyIcon.Dispose();
             m_notifyIcon = null;
         }
-        private void ContentControl_Click(object sender, RoutedEventArgs e)
-        {
-            var btn = sender as System.Windows.Controls.Button;
-            string name = btn.Name;
-            switch (name)
-            {
-                case "necessarily":
-                    ContentBlock.Content = new necessarily();
-                    break;
-                case "additional":
-                    ContentBlock.Content = new additional();
-                    break;
-                case "desirable":
-                    ContentBlock.Content = new desirable();
-                    break;
-                case "minimum":
-                    ContentBlock.Content = new minimum();
-                    break;
-            }
-        }
+       
     }
 }
