@@ -168,15 +168,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image\461104843.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="image\geo-shapes-black-1280b.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="image\26274_1_miscellaneous_digital_art_cat_black_cat.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="image\murr.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -195,6 +186,11 @@
   <ItemGroup>
     <Resource Include="image\minus.png" />
     <Resource Include="image\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\Ежедневные.png" />
+    <Resource Include="image\Еженедельный.png" />
+    <Resource Include="image\Необычный.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
