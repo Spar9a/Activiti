@@ -3,57 +3,232 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Активности.Pages"
+             xmlns:local="clr-namespace:Активности"
              mc:Ignorable="d"
              d:DesignHeight="612" d:DesignWidth="564" ScrollViewer.CanContentScroll="True">
     <ScrollViewer>
         <Grid>
             <StackPanel Orientation="Vertical">
-                <Grid Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="White">
-                    <Grid Height="30" VerticalAlignment="Top">
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                        </StackPanel>
+                <Border Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
+                    <Grid>
+                        <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
+                            <Grid>
+                                <Label Content="[Гильдия] Цепочка из 10 квестов" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Border Width="28" Margin="0,0,2,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border Width="28">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                        <Grid Margin="0,30,0,0">
+                            <Grid x:Name="ProgressGrid" FlowDirection="RightToLeft" Width="28" HorizontalAlignment="Right">
+                                <ProgressBar BorderThickness="0" Background="#FFA6A6A6" Height="116" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                <local:CounterButton VerticalAlignment="Top" Height="28" BorderBrush="{x:Null}" Foreground="{x:Null}" HorizontalContentAlignment="Center">
+                                    <Border Width="26" Height="26" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/plus.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </local:CounterButton>
+                                <local:CounterButton VerticalAlignment="Bottom" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="28">
+                                    <Border Width="26" Height="26" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/minus.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </local:CounterButton>
+                            </Grid>
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid Height="150" VerticalAlignment="Top" Margin="4,4,4,0" Background="White">
-                    <Grid Height="30" VerticalAlignment="Top">
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                        </StackPanel>
+                </Border>
+                <Border Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
+                    <Grid>
+                        <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
+                            <Grid>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Border Width="28" Margin="0,0,2,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border Width="28">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </StackPanel>
+                                <Label Content="[Гильдия] Стройка" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
+                            </Grid>
+                        </Border>
+                        <Grid Margin="0,30,0,0">
+                            <Grid x:Name="ProgressGrid5" Margin="522,0,0,0">
+                                <ProgressBar HorizontalAlignment="Left" Width="15" VerticalContentAlignment="Center" BorderThickness="0" Background="#FFA6A6A6"/>
+                                <Button VerticalAlignment="Top" Height="15" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Активности;component/image/plus.png" Stretch="UniformToFill"/>
+                                    </Button.Background>
+                                </Button>
+                                <Button VerticalAlignment="Bottom" Height="15" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Активности;component/image/minus.png" Stretch="UniformToFill"/>
+                                    </Button.Background>
+                                </Button>
+                            </Grid>
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid Height="150" VerticalAlignment="Top" Margin="4,4,4,0" Background="White">
-                    <Grid Height="30" VerticalAlignment="Top">
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                        </StackPanel>
+                </Border>
+                <Border Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
+                    <Grid>
+                        <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
+                            <Grid>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Border Width="28" Margin="0,0,2,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border Width="28">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </StackPanel>
+                                <Label Content="Рыбалка" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
+                            </Grid>
+                        </Border>
+                        <Grid Margin="0,30,0,0">
+                            <Grid x:Name="ProgressGrid1" Margin="522,0,0,0">
+                                <ProgressBar HorizontalAlignment="Left" Width="15" VerticalContentAlignment="Center" BorderThickness="0" Background="#FFA6A6A6"/>
+                                <Button VerticalAlignment="Top" Height="15" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Активности;component/image/plus.png" Stretch="UniformToFill"/>
+                                    </Button.Background>
+                                </Button>
+                                <Button VerticalAlignment="Bottom" Height="15" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Активности;component/image/minus.png" Stretch="UniformToFill"/>
+                                    </Button.Background>
+                                </Button>
+                            </Grid>
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid Height="150" VerticalAlignment="Top" Margin="4,4,4,0" Background="White">
-                    <Grid Height="30" VerticalAlignment="Top">
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                        </StackPanel>
+                </Border>
+                <Border Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
+                    <Grid>
+                        <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
+                            <Grid>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Border Width="28" Margin="0,0,2,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border Width="28">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </StackPanel>
+                                <Label Content="PVP Арена" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
+                            </Grid>
+                        </Border>
+                        <Grid Margin="0,30,0,0">
+                            <Grid x:Name="ProgressGrid2" Margin="522,0,0,0">
+                                <ProgressBar HorizontalAlignment="Left" Width="15" VerticalContentAlignment="Center" BorderThickness="0" Background="#FFA6A6A6"/>
+                                <Button VerticalAlignment="Top" Height="15" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Активности;component/image/plus.png" Stretch="UniformToFill"/>
+                                    </Button.Background>
+                                </Button>
+                                <Button VerticalAlignment="Bottom" Height="15" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Активности;component/image/minus.png" Stretch="UniformToFill"/>
+                                    </Button.Background>
+                                </Button>
+                            </Grid>
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid Height="150" VerticalAlignment="Top" Margin="4,4,4,0" Background="White">
-                    <Grid Height="30" VerticalAlignment="Top">
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                        </StackPanel>
+                </Border>
+                <Border Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
+                    <Grid>
+                        <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
+                            <Grid>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Border Width="28" Margin="0,0,2,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border Width="28">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </StackPanel>
+                                <Label Content="Пиратский остров" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
+                            </Grid>
+                        </Border>
+                        <Grid Margin="0,30,0,0">
+                            <Grid x:Name="ProgressGrid3" Margin="522,0,0,0">
+                                <ProgressBar HorizontalAlignment="Left" Width="15" VerticalContentAlignment="Center" BorderThickness="0" Background="#FFA6A6A6"/>
+                                <Button VerticalAlignment="Top" Height="15" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Активности;component/image/plus.png" Stretch="UniformToFill"/>
+                                    </Button.Background>
+                                </Button>
+                                <Button VerticalAlignment="Bottom" Height="15" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Активности;component/image/minus.png" Stretch="UniformToFill"/>
+                                    </Button.Background>
+                                </Button>
+                            </Grid>
+                        </Grid>
                     </Grid>
-                </Grid>
+                </Border>
+                <Border Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
+                    <Grid>
+                        <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
+                            <Grid>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Border Width="28" Margin="0,0,2,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border Width="28">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </StackPanel>
+                                <Label Content="Перевозка паков" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
+                            </Grid>
+                        </Border>
+                        <Grid Margin="0,30,0,0">
+                            <Grid x:Name="ProgressGrid4" Margin="522,0,0,0">
+                                <ProgressBar HorizontalAlignment="Left" Width="15" VerticalContentAlignment="Center" BorderThickness="0" Background="#FFA6A6A6"/>
+                                <Button VerticalAlignment="Top" Height="15" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Активности;component/image/plus.png" Stretch="UniformToFill"/>
+                                    </Button.Background>
+                                </Button>
+                                <Button VerticalAlignment="Bottom" Height="15" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Активности;component/image/minus.png" Stretch="UniformToFill"/>
+                                    </Button.Background>
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Border>
 
             </StackPanel>
 

@@ -9,54 +9,217 @@
     <ScrollViewer>
         <Grid>
             <StackPanel Orientation="Vertical">
-                <Grid Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="White">
-                    <Grid Height="30" VerticalAlignment="Top">
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                        </StackPanel>
+                <Border Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
+                    <Grid>
+                        <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
+                            <Grid>
+                                <Label Content="[Фракции] Ученые" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Border Width="28" Margin="0,0,2,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border Width="28">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
                     </Grid>
-                </Grid>
-                <Grid Height="150" VerticalAlignment="Top" Margin="4,4,4,0" Background="White">
-                    <Grid Height="30" VerticalAlignment="Top">
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                        </StackPanel>
+                </Border>
+                <Border Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
+                    <Grid>
+                        <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
+                            <Grid>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Border Width="28" Margin="0,0,2,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border Width="28">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </StackPanel>
+                                <Label Content="[Фракции] Медведи" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
+                            </Grid>
+                        </Border>
                     </Grid>
-                </Grid>
-                <Grid Height="150" VerticalAlignment="Top" Margin="4,4,4,0" Background="White">
-                    <Grid Height="30" VerticalAlignment="Top">
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                        </StackPanel>
+                </Border>
+                <Border Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
+                    <Grid>
+                        <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
+                            <Grid>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Border Width="28" Margin="0,0,2,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border Width="28">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </StackPanel>
+                                <Label Content="[Фракции] Фалмари" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
+                            </Grid>
+                        </Border>
                     </Grid>
-                </Grid>
-                <Grid Height="150" VerticalAlignment="Top" Margin="4,4,4,0" Background="White">
-                    <Grid Height="30" VerticalAlignment="Top">
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                        </StackPanel>
+                </Border>
+                <Border Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
+                    <Grid>
+                        <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
+                            <Grid>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Border Width="28" Margin="0,0,2,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border Width="28">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </StackPanel>
+                                <Label Content="[Фракции] Грибы" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
+                            </Grid>
+                        </Border>
                     </Grid>
-                </Grid>
-                <Grid Height="150" VerticalAlignment="Top" Margin="4,4,4,0" Background="White">
-                    <Grid Height="30" VerticalAlignment="Top">
-                        <Label Content="Label" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                            <Border BorderBrush="Black" BorderThickness="1" Width="30" Height="30"/>
-                        </StackPanel>
+                </Border>
+                <Border Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
+                    <Grid>
+                        <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
+                            <Grid>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Border Width="28" Margin="0,0,2,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border Width="28">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </StackPanel>
+                                <Label Content="[Фракции] Крылатые" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
+                            </Grid>
+                        </Border>
                     </Grid>
-                </Grid>
-
+                </Border>
+                <Border Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
+                    <Grid>
+                        <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
+                            <Grid>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Border Width="28" Margin="0,0,2,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border Width="28">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </StackPanel>
+                                <Label Content="120 шагов" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Border>
+                <Border Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
+                    <Grid>
+                        <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
+                            <Grid>
+                                <Label Content="[Фракции] Главный город" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Border Width="28" Margin="0,0,2,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border Width="28">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Border>
+                <Border Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
+                    <Grid>
+                        <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
+                            <Grid>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Border Width="28" Margin="0,0,2,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border Width="28">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </StackPanel>
+                                <Label Content="[Фракции] Бамбуковая деревня" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Border>
+                <Border Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
+                    <Grid>
+                        <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
+                            <Grid>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Border Width="28" Margin="0,0,2,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border Width="28">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </StackPanel>
+                                <Label Content="[Фракции] Северяне" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Border>
+                <Border Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
+                    <Grid>
+                        <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
+                            <Grid>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Border Width="28" Margin="0,0,2,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border Width="28">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                </StackPanel>
+                                <Label Content="[Фракции] Варвары" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Border>
             </StackPanel>
-
         </Grid>
     </ScrollViewer>
 </UserControl>

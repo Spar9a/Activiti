@@ -74,6 +74,25 @@ namespace Активности
             m_notifyIcon.Dispose();
             m_notifyIcon = null;
         }
-       
+        private void ContentControl_Click(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as System.Windows.Controls.Button;
+            string name = btn.Name;
+            switch (name)
+            {
+                case "necessarily":
+                    ContentBlock.Content = new Necessary();
+                    break;
+                case "additional":
+                    ContentBlock.Content = new Additionaly();
+                    break;
+                case "desirable":
+                    ContentBlock.Content = new Desirable();
+                    break;
+                case "minimum":
+                    ContentBlock.Content = new Minimum();
+                    break;
+            }
+        }       
     }
 }

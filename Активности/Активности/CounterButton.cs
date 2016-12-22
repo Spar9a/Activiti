@@ -8,6 +8,7 @@ using System.Windows.Controls;
 namespace Активности
 {
     class CounterButton : Button
+    
     {
     }
 }
