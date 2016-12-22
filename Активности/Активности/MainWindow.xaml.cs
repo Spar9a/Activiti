@@ -97,10 +97,10 @@ namespace Активности
             {
                 Server_Time.Content = time;
             }));
-            Update_Time.Dispatcher.BeginInvoke(new Action(delegate ()
+            /*Update_Time.Dispatcher.BeginInvoke(new Action(delegate ()
             {
                 Update_Time.Content = update_time;
-            }));
+            }));*/
         }
         private WindowState m_storedWindowState = WindowState.Normal;
         void OnStateChanged(object sender, EventArgs args)

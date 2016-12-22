@@ -16,14 +16,10 @@
                             <Grid>
                                 <Label Content="25 шагов" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                    <Border Width="28" Margin="0,0,2,0">
-                                        <Border.Background>
-                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
-                                        </Border.Background>
-                                    </Border>
+                                    <Label x:Name="Steps25_counter" FontSize="20" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold"/>
                                     <Border Width="28">
                                         <Border.Background>
-                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="/Активности;component/image/Еженедельный.png" Stretch="UniformToFill"/>
                                         </Border.Background>
                                     </Border>
                                 </StackPanel>
@@ -31,7 +27,7 @@
                         </Border>
                         <Grid Margin="0,30,0,0">
                             <Grid x:Name="ProgressGrid" FlowDirection="RightToLeft" Width="28" HorizontalAlignment="Right">
-                                <ProgressBar x:Name="Steps25" BorderThickness="0" Background="#FFA6A6A6" Height="116" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Orientation="Vertical" Maximum="2"/>
+                                <ProgressBar x:Name="Steps25" BorderThickness="0" Background="#FFA6A6A6" Height="116" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Orientation="Vertical" Maximum="3"/>
                                 <Активности:CounterButton x:Name="Steps25_plus" VerticalAlignment="Top" Height="28" BorderBrush="{x:Null}" Foreground="{x:Null}" HorizontalContentAlignment="Center" Click="Steps25_plus_Click">
                                     <Border Width="26" Height="26" HorizontalAlignment="Center" VerticalAlignment="Center">
                                         <Border.Background>
@@ -47,6 +43,8 @@
                                     </Border>
                                 </Активности:CounterButton>
                             </Grid>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="267,5,0,0" Height="105" Width="237" Foreground="#FFB5B5B5" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold"><Run Text="D"/><Run Text="ополнительная информ"/><Run Text="ация"/><Run Text=":"/><LineBreak/><Run Text=" Таких квеста 3 в неделю, в центральном, у левого и у правого города"/></TextBlock>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,5,0,0" Height="105" Width="237" Foreground="#FFB5B5B5" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold"><Run Text="Расположение"/><Run Text=":"/><LineBreak/><Run Text=" 5896, -1965, 4 (Сулан)"/><LineBreak/><Run Text="-2273, 849, 80 (Калахар)"/><LineBreak/><Run Text="5467, -427, 2 (Озерная Деревня)"/></TextBlock>
                         </Grid>
                     </Grid>
                 </Border>
@@ -55,14 +53,10 @@
                         <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
                             <Grid>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                    <Border Width="28" Margin="0,0,2,0">
-                                        <Border.Background>
-                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
-                                        </Border.Background>
-                                    </Border>
+                                    <Label x:Name="Brakteat5Quest_counter" FontSize="20" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold"/>
                                     <Border Width="28">
                                         <Border.Background>
-                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="/Активности;component/image/Еженедельный.png" Stretch="UniformToFill"/>
                                         </Border.Background>
                                     </Border>
                                 </StackPanel>
@@ -87,6 +81,11 @@
                                     </Border>
                                 </Активности:CounterButton>
                             </Grid>
+                            <Label Content="НПЦ:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFB5B5B5" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold" Margin="5,2,0,0"/>
+                            <Label Content="Расположение:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFB5B5B5" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold" Margin="5,31,0,0" Width="102"/>
+                            <Label Content="Староста Зиан" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFB5B5B5" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold" Margin="107,2,0,0"/>
+                            <Label Content="6080, -315, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFB5B5B5" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold" Margin="107,31,0,0"/>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="267,5,0,0" Height="105" Width="237" Foreground="#FFB5B5B5" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold"><Run Text="D"/><Run Text="ополнительная информ"/><Run Text="ация"/><Run Text=":"/><LineBreak/><Run Text=" "/><Run Text="В"/><Run Text="ыполнять лучше группой из 5 человек, т.к помимо плюшек дадут много опыта."/></TextBlock>
                         </Grid>
                     </Grid>
                 </Border>
@@ -95,14 +94,10 @@
                         <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
                             <Grid>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                    <Border Width="28" Margin="0,0,2,0">
-                                        <Border.Background>
-                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
-                                        </Border.Background>
-                                    </Border>
+                                    <Label x:Name="Jumps_counter" FontSize="20" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold"/>
                                     <Border Width="28">
                                         <Border.Background>
-                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="/Активности;component/image/Ежедневные.png" Stretch="UniformToFill"/>
                                         </Border.Background>
                                     </Border>
                                 </StackPanel>
@@ -127,6 +122,9 @@
                                     </Border>
                                 </Активности:CounterButton>
                             </Grid>
+                            <Label Content="Расположение:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFB5B5B5" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold" Margin="10,5,0,0" Width="102"/>
+                            <Label Content="4865, -2044, 71" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFB5B5B5" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold" Margin="112,5,0,0"/>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="267,5,0,0" Height="105" Width="237" Foreground="#FFB5B5B5" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold"><Run Text="D"/><Run Text="ополнительная информ"/><Run Text="ация"/><Run Text=":"/><LineBreak/><Run Text=" Дополнительный опыт"/><Run Text="."/></TextBlock>
                         </Grid>
                     </Grid>
                 </Border>
@@ -135,21 +133,20 @@
                         <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
                             <Grid>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                    <Border Width="28" Margin="0,0,2,0">
-                                        <Border.Background>
-                                            <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
-                                        </Border.Background>
-                                    </Border>
                                     <Border Width="28">
                                         <Border.Background>
-                                            <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="/Активности;component/image/Необычный.png" Stretch="UniformToFill"/>
                                         </Border.Background>
                                     </Border>
                                 </StackPanel>
                                 <Label Content="Доска Авантюриста" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
                             </Grid>
                         </Border>
-                        <Grid Margin="0,30,0,0"/>
+                        <Grid Margin="0,30,0,0">
+                            <Label Content="Расположение:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFB5B5B5" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold" Margin="10,5,0,0" Width="102"/>
+                            <Label Content="5916, -1886, 3" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFB5B5B5" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold" Margin="112,5,0,0"/>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="267,5,0,0" Height="105" Width="237" Foreground="#FFB5B5B5" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold"><Run Text="D"/><Run Text="ополнительная информ"/><Run Text="ация"/><Run Text=":"/><LineBreak/><Run Text=" Много денег и опыта. Ограничений в выполнении нет, поэтому делайте в свободное время!"/></TextBlock>
+                        </Grid>
                     </Grid>
                 </Border>
             </StackPanel>

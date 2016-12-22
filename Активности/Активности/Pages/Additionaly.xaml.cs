@@ -23,148 +23,171 @@ namespace Активности.Pages
         public Additionaly()
         {
             InitializeComponent();
-            // counter();
+            counter();
         }
         private void scient_plus_Click(object sender, RoutedEventArgs e)
         {
             scient.Value++;
-            // counter();
+            counter();
         }
 
         private void scient_minus_Click(object sender, RoutedEventArgs e)
         {
             scient.Value--;
-            //   counter();
+            counter();
         }
         private void Bear_plus_Click(object sender, RoutedEventArgs e)
         {
             Bear.Value++;
-            //  counter();
+            counter();
         }
 
         private void Bear_minus_Click(object sender, RoutedEventArgs e)
         {
             Bear.Value--;
-            // counter();
+            counter();
         }
         private void Falmary_plus_Click(object sender, RoutedEventArgs e)
         {
             Falmary.Value++;
-            //  counter();
+            counter();
         }
 
         private void Falmary_minus_Click(object sender, RoutedEventArgs e)
         {
             Falmary.Value--;
-            // counter();
+            counter();
         }
         private void Mushrooms_plus_Click(object sender, RoutedEventArgs e)
         {
             Mushrooms.Value++;
-            //  counter();
+            counter();
         }
 
         private void Mushrooms_minus_Click(object sender, RoutedEventArgs e)
         {
             Mushrooms.Value--;
-            // counter();
+            counter();
         }
         private void Cruise_plus_Click(object sender, RoutedEventArgs e)
         {
             Cruise.Value++;
-            //  counter();
+            counter();
         }
 
         private void Cruise_minus_Click(object sender, RoutedEventArgs e)
         {
             Cruise.Value--;
-            // counter();
+            counter();
         }
         private void Steps120_plus_Click(object sender, RoutedEventArgs e)
         {
             Steps120.Value++;
-            //  counter();
+            counter();
         }
 
         private void Steps120_minus_Click(object sender, RoutedEventArgs e)
         {
             Steps120.Value--;
-            // counter();
+            counter();
         }
         private void CentralCity_plus_Click(object sender, RoutedEventArgs e)
         {
             CentralCity.Value++;
-            //  counter();
+            counter();
         }
 
         private void CentralCity_minus_Click(object sender, RoutedEventArgs e)
         {
             CentralCity.Value--;
-            // counter();
+            counter();
         }
         private void BambooVillage_plus_Click(object sender, RoutedEventArgs e)
         {
             BambooVillage.Value++;
-            //  counter();
+            counter();
         }
 
         private void BambooVillage_minus_Click(object sender, RoutedEventArgs e)
         {
             BambooVillage.Value--;
-            // counter();
+            counter();
         }
         private void Northerners_plus_Click(object sender, RoutedEventArgs e)
         {
             Northerners.Value++;
-            //  counter();
+            counter();
         }
 
         private void Northerners_minus_Click(object sender, RoutedEventArgs e)
         {
             Northerners.Value--;
-            // counter();
+            counter();
         }
         private void Barbarians_plus_Click(object sender, RoutedEventArgs e)
         {
             Barbarians.Value++;
-            //  counter();
+            counter();
         }
 
         private void Barbarians_minus_Click(object sender, RoutedEventArgs e)
         {
             Barbarians.Value--;
-            // counter();
+            counter();
         }
 
-        /*private void counter()
+        private void counter()
         {
-            string guild_10_count = Convert.ToString(guild_10.Value) + " из " + Convert.ToString(guild_10.Maximum);
-            string guild_build_count = Convert.ToString(guild_build.Value) + " из " + Convert.ToString(guild_build.Maximum);
-            string pirate_island_count = Convert.ToString(pirate_island.Value) + " из " + Convert.ToString(pirate_island.Maximum);
-            guild_10_counter.Dispatcher.BeginInvoke(new Action(delegate ()
+            string Barbarians_count = Convert.ToString(Barbarians.Value) + " из " + Convert.ToString(Barbarians.Maximum);
+            string Northerners_count = Convert.ToString(Northerners.Value) + " из " + Convert.ToString(Northerners.Maximum);
+            string BambooVillage_count = Convert.ToString(BambooVillage.Value) + " из " + Convert.ToString(BambooVillage.Maximum);
+            string CentralCity_count = Convert.ToString(CentralCity.Value) + " из " + Convert.ToString(CentralCity.Maximum);
+            string Steps120_count = Convert.ToString(Steps120.Value) + " из " + Convert.ToString(Steps120.Maximum);
+            string Cruise_count = Convert.ToString(Cruise.Value) + " из " + Convert.ToString(Cruise.Maximum);
+            string Mushrooms_count = Convert.ToString(Mushrooms.Value) + " из " + Convert.ToString(Mushrooms.Maximum);
+            string Falmary_count = Convert.ToString(Falmary.Value) + " из " + Convert.ToString(Falmary.Maximum);
+            string Bear_count = Convert.ToString(Bear.Value) + " из " + Convert.ToString(Bear.Maximum);
+            string scient_count = Convert.ToString(scient.Value) + " из " + Convert.ToString(scient.Maximum);
+            Barbarians_counter.Dispatcher.BeginInvoke(new Action(delegate ()
             {
-                guild_10_counter.Content = guild_10_count;
-                if (guild_10.Value == guild_10.Maximum)
-                    guild_10_label.Background = guild_10_label_Green.Background;
-                else
-                    guild_10_label.Background = guild_10_label_Red.Background;
+                Barbarians_counter.Content = Barbarians_count;
             }));
-            guild_build_counter.Dispatcher.BeginInvoke(new Action(delegate ()
+            Northerners_counter.Dispatcher.BeginInvoke(new Action(delegate ()
             {
-                guild_build_counter.Content = guild_build_count;
-                if (guild_build.Value == guild_build.Maximum)
-                    guild_10_label1.Background = guild_10_label_Green.Background;
-                else
-                    guild_10_label1.Background = guild_10_label_Red.Background;
+                Northerners_counter.Content = Northerners_count;
             }));
-            pirate_island_counter.Dispatcher.BeginInvoke(new Action(delegate ()
+            BambooVillage_counter.Dispatcher.BeginInvoke(new Action(delegate ()
             {
-                pirate_island_counter.Content = pirate_island_count;
-                if (pirate_island.Value == pirate_island.Maximum)
-                    pirate_islandlabel.Background = guild_10_label_Green.Background;
-                else
-                    pirate_islandlabel.Background = guild_10_label_Red.Background;
+                BambooVillage_counter.Content = BambooVillage_count;
             }));
-        }*/
+            CentralCity_counter.Dispatcher.BeginInvoke(new Action(delegate ()
+            {
+                CentralCity_counter.Content = CentralCity_count;
+            }));
+            Steps120_counter.Dispatcher.BeginInvoke(new Action(delegate ()
+            {
+                Steps120_counter.Content = Steps120_count;
+            }));
+            Cruise_counter.Dispatcher.BeginInvoke(new Action(delegate ()
+            {
+                Cruise_counter.Content = Cruise_count;
+            }));
+            Mushrooms_counter.Dispatcher.BeginInvoke(new Action(delegate ()
+            {
+                Mushrooms_counter.Content = Mushrooms_count;
+            }));
+            Falmary_counter.Dispatcher.BeginInvoke(new Action(delegate ()
+            {
+                Falmary_counter.Content = Falmary_count;
+            }));
+            Bear_counter.Dispatcher.BeginInvoke(new Action(delegate ()
+            {
+                Bear_counter.Content = Bear_count;
+            }));
+            scient_counter.Dispatcher.BeginInvoke(new Action(delegate ()
+            {
+                scient_counter.Content = scient_count;
+            }));
+        }
     }
 }
