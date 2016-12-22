@@ -38,7 +38,7 @@
                                         </Border.Background>
                                     </Border>
                                 </local:CounterButton>
-                                <local:CounterButton x:Name="guild_10_minus" VerticalAlignment="Bottom" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="28">
+                                <local:CounterButton x:Name="guild_10_minus" VerticalAlignment="Bottom" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="28" Click="guild_10_minus_Click">
                                     <Border Width="26" Height="26" HorizontalAlignment="Center" VerticalAlignment="Center">
                                         <Border.Background>
                                             <ImageBrush ImageSource="/Активности;component/image/minus.png" Stretch="UniformToFill"/>

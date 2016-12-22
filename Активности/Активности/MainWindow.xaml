@@ -24,7 +24,7 @@
             <local:ControlButton x:Name="additional" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Width="124" Click="ContentControl_Click" Margin="-3,0,0,5">
                 <Label Content="Дополнительно"/>
             </local:ControlButton>
-            <Grid Margin="0,0,0,5" Width="124">
+            <Grid Margin="-3,0,0,5" Width="124">
                 <local:ControlButton x:Name="Time" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Click="ContentControl_Click"/>
                 <StackPanel Orientation="Vertical">
                     <Label x:Name="lb_Server_Time" Content="Текущее время на сервере:" Foreground="Black" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="8" FontWeight="Bold" Height="18"/>
