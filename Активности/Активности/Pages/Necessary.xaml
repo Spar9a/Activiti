@@ -15,11 +15,11 @@
                             <Grid>
                                 <Label Content="[Гильдия] Цепочка из 10 квестов" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14"/>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                    <Border Width="28" Margin="0,0,2,0">
-                                        <Border.Background>
+                                    <Canvas Width="28" Margin="0,0,2,0">
+                                        <Canvas.Background>
                                             <ImageBrush ImageSource="/Активности;component/image/world.png" Stretch="Uniform"/>
-                                        </Border.Background>
-                                    </Border>
+                                        </Canvas.Background>
+                                    </Canvas>
                                     <Border Width="28">
                                         <Border.Background>
                                             <ImageBrush ImageSource="/Активности;component/image/clock.png" Stretch="UniformToFill"/>

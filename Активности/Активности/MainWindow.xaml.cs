@@ -16,6 +16,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
 using Активности.Pages;
+using System.Diagnostics;
 
 namespace Активности
 {
@@ -25,6 +26,7 @@ namespace Активности
     public partial class MainWindow : Window
     {
         private System.Windows.Forms.NotifyIcon m_notifyIcon;
+        protected Process[] procs;
         public MainWindow()
         {
             InitializeComponent();
@@ -39,11 +41,27 @@ namespace Активности
             }
             ContentBlock.Content = new Necessary();
             Timer Timer1 = new Timer();
+            Timer Timer2 = new Timer();
             Timer1.Interval = 1000;
+            Timer2.Interval = 1000;
             Timer1.Tick += new EventHandler(Timer1_Tick);
+            Timer2.Tick += new EventHandler(RevaSearch);
             Timer1.Enabled = true;
+            Timer2.Enabled = true;
         }
-
+        void RevaSearch(object sender, EventArgs e)
+        {
+            if (WindowState == WindowState.Minimized)
+            {
+                Process[] procs = Process.GetProcesses();
+                foreach (Process p in procs)
+                    if (p.ProcessName == "notepad")
+                    {
+                        Show();
+                        WindowState = m_storedWindowState;
+                    }
+            }
+        }
         void Timer1_Tick(object sender, EventArgs e)
         {
             TimeZoneInfo moscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
@@ -92,6 +110,7 @@ namespace Активности
                 Hide();
                 if (m_notifyIcon != null)
                     m_notifyIcon.ShowBalloonTip(2000);
+
             }
             else
                 m_storedWindowState = WindowState;
@@ -138,6 +157,6 @@ namespace Активности
                     ContentBlock.Content = new Minimum();
                     break;
             }
-        }       
+        }
     }
 }

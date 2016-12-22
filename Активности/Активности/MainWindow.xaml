@@ -24,9 +24,15 @@
             <local:ControlButton x:Name="additional" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Width="124" Click="ContentControl_Click" Margin="-3,0,0,5">
                 <Label Content="Дополнительно"/>
             </local:ControlButton>
-            <local:ControlButton x:Name="Time" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Width="124" Click="ContentControl_Click" Margin="-3,0,0,5">
-                <Label Content="Label"/>
-            </local:ControlButton>
+            <Grid Margin="0,0,0,5" Width="124">
+                <local:ControlButton x:Name="Time" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Click="ContentControl_Click"/>
+                <StackPanel Orientation="Vertical">
+                    <Label x:Name="lb_Server_Time" Content="Текущее время на сервере:" Foreground="Black" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="8" FontWeight="Bold" Height="18"/>
+                    <Label x:Name="Server_Time" Content="" Foreground="Black" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBlock x:Name="txUpdate" TextWrapping="Wrap" Text="До обновления ежедневных квестов:" Foreground="Black" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold" HorizontalAlignment="Center" FontSize="8" VerticalAlignment="Bottom"/>
+                    <Label x:Name="Update_Time" Content="" Foreground="Black" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold" VerticalAlignment="Bottom" Height="18" FontSize="8" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
         </StackPanel>
         <UserControl x:Name="ContentBlock" Margin="3,95,5,0"/>
     </Grid>
