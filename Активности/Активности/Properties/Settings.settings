@@ -2,73 +2,73 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Активности.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="set_nec_guild10" Type="System.Double" Scope="User">
+    <Setting Name="set_nec_guild10" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_nec_guild_build" Type="System.Double" Scope="User">
+    <Setting Name="set_nec_guild_build" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_nec_ostrov" Type="System.Double" Scope="User">
+    <Setting Name="set_nec_ostrov" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_nec_pack" Type="System.Double" Scope="User">
+    <Setting Name="set_nec_pack" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_min_Arena4Gods" Type="System.Double" Scope="User">
+    <Setting Name="set_min_Arena4Gods" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_min_Bath" Type="System.Double" Scope="User">
+    <Setting Name="set_min_Bath" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_min_BlackMarket" Type="System.Double" Scope="User">
+    <Setting Name="set_min_BlackMarket" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_min_KeepersWeek" Type="System.Double" Scope="User">
+    <Setting Name="set_min_KeepersWeek" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_min_KeepersDay" Type="System.Double" Scope="User">
+    <Setting Name="set_min_KeepersDay" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_des_Steps25" Type="System.Double" Scope="User">
+    <Setting Name="set_des_Steps25" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_des_Brakteat5Quest" Type="System.Double" Scope="User">
+    <Setting Name="set_des_Brakteat5Quest" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_des_Jumps" Type="System.Double" Scope="User">
+    <Setting Name="set_des_Jumps" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_Barbarians" Type="System.Double" Scope="User">
+    <Setting Name="set_Barbarians" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_Northerners" Type="System.Double" Scope="User">
+    <Setting Name="set_Northerners" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_BambooVillage" Type="System.Double" Scope="User">
+    <Setting Name="set_BambooVillage" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_CentralCity" Type="System.Double" Scope="User">
+    <Setting Name="set_CentralCity" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_Steps120" Type="System.Double" Scope="User">
+    <Setting Name="set_Steps120" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_Cruise" Type="System.Double" Scope="User">
+    <Setting Name="set_Cruise" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_Mushrooms" Type="System.Double" Scope="User">
+    <Setting Name="set_Mushrooms" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_Falmary" Type="System.Double" Scope="User">
+    <Setting Name="set_Falmary" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_Bear" Type="System.Double" Scope="User">
+    <Setting Name="set_Bear" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="set_scient" Type="System.Double" Scope="User">
+    <Setting Name="set_scient" Roaming="true" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="last_used_day" Type="System.DateTime" Scope="User">
+    <Setting Name="last_used_day" Roaming="true" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)">2000-01-01</Value>
     </Setting>
   </Settings>
