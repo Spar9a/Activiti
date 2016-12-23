@@ -22,5 +22,280 @@ namespace Активности.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_nec_guild10 {
+            get {
+                return ((double)(this["set_nec_guild10"]));
+            }
+            set {
+                this["set_nec_guild10"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_nec_guild_build {
+            get {
+                return ((double)(this["set_nec_guild_build"]));
+            }
+            set {
+                this["set_nec_guild_build"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_nec_ostrov {
+            get {
+                return ((double)(this["set_nec_ostrov"]));
+            }
+            set {
+                this["set_nec_ostrov"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_nec_pack {
+            get {
+                return ((double)(this["set_nec_pack"]));
+            }
+            set {
+                this["set_nec_pack"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_min_Arena4Gods {
+            get {
+                return ((double)(this["set_min_Arena4Gods"]));
+            }
+            set {
+                this["set_min_Arena4Gods"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_min_Bath {
+            get {
+                return ((double)(this["set_min_Bath"]));
+            }
+            set {
+                this["set_min_Bath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_min_BlackMarket {
+            get {
+                return ((double)(this["set_min_BlackMarket"]));
+            }
+            set {
+                this["set_min_BlackMarket"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_min_KeepersWeek {
+            get {
+                return ((double)(this["set_min_KeepersWeek"]));
+            }
+            set {
+                this["set_min_KeepersWeek"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_min_KeepersDay {
+            get {
+                return ((double)(this["set_min_KeepersDay"]));
+            }
+            set {
+                this["set_min_KeepersDay"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_des_Steps25 {
+            get {
+                return ((double)(this["set_des_Steps25"]));
+            }
+            set {
+                this["set_des_Steps25"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_des_Brakteat5Quest {
+            get {
+                return ((double)(this["set_des_Brakteat5Quest"]));
+            }
+            set {
+                this["set_des_Brakteat5Quest"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_des_Jumps {
+            get {
+                return ((double)(this["set_des_Jumps"]));
+            }
+            set {
+                this["set_des_Jumps"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_Barbarians {
+            get {
+                return ((double)(this["set_Barbarians"]));
+            }
+            set {
+                this["set_Barbarians"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_Northerners {
+            get {
+                return ((double)(this["set_Northerners"]));
+            }
+            set {
+                this["set_Northerners"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_BambooVillage {
+            get {
+                return ((double)(this["set_BambooVillage"]));
+            }
+            set {
+                this["set_BambooVillage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_CentralCity {
+            get {
+                return ((double)(this["set_CentralCity"]));
+            }
+            set {
+                this["set_CentralCity"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_Steps120 {
+            get {
+                return ((double)(this["set_Steps120"]));
+            }
+            set {
+                this["set_Steps120"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_Cruise {
+            get {
+                return ((double)(this["set_Cruise"]));
+            }
+            set {
+                this["set_Cruise"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_Mushrooms {
+            get {
+                return ((double)(this["set_Mushrooms"]));
+            }
+            set {
+                this["set_Mushrooms"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_Falmary {
+            get {
+                return ((double)(this["set_Falmary"]));
+            }
+            set {
+                this["set_Falmary"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_Bear {
+            get {
+                return ((double)(this["set_Bear"]));
+            }
+            set {
+                this["set_Bear"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double set_scient {
+            get {
+                return ((double)(this["set_scient"]));
+            }
+            set {
+                this["set_scient"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTime last_used_day {
+            get {
+                return ((global::System.DateTime)(this["last_used_day"]));
+            }
+            set {
+                this["last_used_day"] = value;
+            }
+        }
     }
 }

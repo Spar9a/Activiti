@@ -23,8 +23,10 @@ namespace Активности.Pages
         public Additionaly()
         {
             InitializeComponent();
+            set_init();
             counter();
         }
+
         private void scient_plus_Click(object sender, RoutedEventArgs e)
         {
             scient.Value++;
@@ -36,6 +38,7 @@ namespace Активности.Pages
             scient.Value--;
             counter();
         }
+
         private void Bear_plus_Click(object sender, RoutedEventArgs e)
         {
             Bear.Value++;
@@ -47,6 +50,7 @@ namespace Активности.Pages
             Bear.Value--;
             counter();
         }
+
         private void Falmary_plus_Click(object sender, RoutedEventArgs e)
         {
             Falmary.Value++;
@@ -58,6 +62,7 @@ namespace Активности.Pages
             Falmary.Value--;
             counter();
         }
+
         private void Mushrooms_plus_Click(object sender, RoutedEventArgs e)
         {
             Mushrooms.Value++;
@@ -69,6 +74,7 @@ namespace Активности.Pages
             Mushrooms.Value--;
             counter();
         }
+
         private void Cruise_plus_Click(object sender, RoutedEventArgs e)
         {
             Cruise.Value++;
@@ -80,6 +86,7 @@ namespace Активности.Pages
             Cruise.Value--;
             counter();
         }
+
         private void Steps120_plus_Click(object sender, RoutedEventArgs e)
         {
             Steps120.Value++;
@@ -91,6 +98,7 @@ namespace Активности.Pages
             Steps120.Value--;
             counter();
         }
+
         private void CentralCity_plus_Click(object sender, RoutedEventArgs e)
         {
             CentralCity.Value++;
@@ -102,6 +110,7 @@ namespace Активности.Pages
             CentralCity.Value--;
             counter();
         }
+
         private void BambooVillage_plus_Click(object sender, RoutedEventArgs e)
         {
             BambooVillage.Value++;
@@ -113,6 +122,7 @@ namespace Активности.Pages
             BambooVillage.Value--;
             counter();
         }
+
         private void Northerners_plus_Click(object sender, RoutedEventArgs e)
         {
             Northerners.Value++;
@@ -124,6 +134,7 @@ namespace Активности.Pages
             Northerners.Value--;
             counter();
         }
+
         private void Barbarians_plus_Click(object sender, RoutedEventArgs e)
         {
             Barbarians.Value++;
@@ -138,6 +149,18 @@ namespace Активности.Pages
 
         private void counter()
         {
+            Properties.Settings.Default.set_Barbarians = Barbarians.Value;
+            Properties.Settings.Default.set_Northerners = Northerners.Value;
+            Properties.Settings.Default.set_BambooVillage = BambooVillage.Value;
+            Properties.Settings.Default.set_CentralCity = CentralCity.Value;
+            Properties.Settings.Default.set_Steps120 = Steps120.Value;
+            Properties.Settings.Default.set_Cruise = Cruise.Value;
+            Properties.Settings.Default.set_Mushrooms = Mushrooms.Value;
+            Properties.Settings.Default.set_Falmary = Falmary.Value;
+            Properties.Settings.Default.set_Bear = Bear.Value;
+            Properties.Settings.Default.set_scient = scient.Value;
+            Properties.Settings.Default.Save();
+
             string Barbarians_count = Convert.ToString(Barbarians.Value) + " из " + Convert.ToString(Barbarians.Maximum);
             string Northerners_count = Convert.ToString(Northerners.Value) + " из " + Convert.ToString(Northerners.Maximum);
             string BambooVillage_count = Convert.ToString(BambooVillage.Value) + " из " + Convert.ToString(BambooVillage.Maximum);
@@ -188,6 +211,21 @@ namespace Активности.Pages
             {
                 scient_counter.Content = scient_count;
             }));
+        }
+
+        private void set_init()
+        {
+            Barbarians.Value = Properties.Settings.Default.set_Barbarians;
+            Northerners.Value = Properties.Settings.Default.set_Northerners;
+            BambooVillage.Value = Properties.Settings.Default.set_BambooVillage;
+            CentralCity.Value = Properties.Settings.Default.set_CentralCity;
+            Steps120.Value = Properties.Settings.Default.set_Steps120;
+            Cruise.Value = Properties.Settings.Default.set_Cruise;
+            Mushrooms.Value = Properties.Settings.Default.set_Mushrooms;
+            Falmary.Value = Properties.Settings.Default.set_Falmary;
+            Bear.Value = Properties.Settings.Default.set_Bear;
+            scient.Value = Properties.Settings.Default.set_scient;
+            Properties.Settings.Default.Save();
         }
     }
 }

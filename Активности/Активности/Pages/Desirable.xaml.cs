@@ -23,8 +23,10 @@ namespace Активности.Pages
         public Desirable()
         {
             InitializeComponent();
+            set_init();
             counter();
         }
+
         private void Steps25_plus_Click(object sender, RoutedEventArgs e)
         {
             Steps25.Value++;
@@ -36,6 +38,7 @@ namespace Активности.Pages
             Steps25.Value--;
             counter();
         }
+
         private void Brakteat5Quest_plus_Click(object sender, RoutedEventArgs e)
         {
             Brakteat5Quest.Value++;
@@ -47,6 +50,7 @@ namespace Активности.Pages
             Brakteat5Quest.Value--;
             counter();
         }
+
         private void Jumps_plus_Click(object sender, RoutedEventArgs e)
         {
             Jumps.Value++;
@@ -61,6 +65,11 @@ namespace Активности.Pages
 
         private void counter()
         {
+            Properties.Settings.Default.set_des_Steps25 = Steps25.Value;
+            Properties.Settings.Default.set_des_Brakteat5Quest = Brakteat5Quest.Value;
+            Properties.Settings.Default.set_des_Jumps = Jumps.Value;
+            Properties.Settings.Default.Save();
+
             string Steps25_count = Convert.ToString(Steps25.Value) + " из " + Convert.ToString(Steps25.Maximum);
             string Brakteat5Quest_count = Convert.ToString(Brakteat5Quest.Value) + " из " + Convert.ToString(Brakteat5Quest.Maximum);
             string Jumps_count = Convert.ToString(Jumps.Value) + " из " + Convert.ToString(Jumps.Maximum);
@@ -76,6 +85,14 @@ namespace Активности.Pages
             {
                 Jumps_counter.Content = Jumps_count;
             }));
+        }
+
+        private void set_init()
+        {
+            Steps25.Value = Properties.Settings.Default.set_des_Steps25;
+            Brakteat5Quest.Value = Properties.Settings.Default.set_des_Brakteat5Quest;
+            Jumps.Value = Properties.Settings.Default.set_des_Jumps;
+            Properties.Settings.Default.Save();
         }
     }
 }

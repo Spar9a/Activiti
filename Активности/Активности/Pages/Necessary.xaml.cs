@@ -23,8 +23,10 @@ namespace Активности.Pages
         public Necessary()
         {
             InitializeComponent();
+            set_init();
             counter();
         }
+
         private void guild_10_plus_Click(object sender, RoutedEventArgs e)
         {
             guild_10.Value++;
@@ -36,6 +38,7 @@ namespace Активности.Pages
             guild_10.Value--;
             counter();
         }
+
         private void guild_build_plus_Click(object sender, RoutedEventArgs e)
         {
             guild_build.Value++;
@@ -47,6 +50,7 @@ namespace Активности.Pages
             guild_build.Value--;
             counter();
         }
+
         private void pirate_island_plus_Click(object sender, RoutedEventArgs e)
         {
             pirate_island.Value++;
@@ -73,6 +77,12 @@ namespace Активности.Pages
 
         private void counter()
         {
+            Properties.Settings.Default.set_nec_guild10 = guild_10.Value;
+            Properties.Settings.Default.set_nec_guild_build = guild_build.Value;
+            Properties.Settings.Default.set_nec_ostrov = pirate_island.Value;
+            Properties.Settings.Default.set_nec_pack = pack.Value;
+            Properties.Settings.Default.Save();
+
             string guild_10_count = Convert.ToString(guild_10.Value) + " из " + Convert.ToString(guild_10.Maximum);
             string guild_build_count = Convert.ToString(guild_build.Value) + " из " + Convert.ToString(guild_build.Maximum);
             string pirate_island_count = Convert.ToString(pirate_island.Value) + " из " + Convert.ToString(pirate_island.Maximum);
@@ -107,5 +117,13 @@ namespace Активности.Pages
             }));
         }
 
+        private void set_init()
+        {
+            guild_10.Value = Properties.Settings.Default.set_nec_guild10;
+            guild_build.Value = Properties.Settings.Default.set_nec_guild_build;
+            pirate_island.Value = Properties.Settings.Default.set_nec_ostrov;
+            pack.Value = Properties.Settings.Default.set_nec_pack;
+            Properties.Settings.Default.Save();
+        }
     }
 }

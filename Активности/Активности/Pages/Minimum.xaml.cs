@@ -23,8 +23,10 @@ namespace Активности.Pages
         public Minimum()
         {
             InitializeComponent();
+            set_init();
             counter();
         }
+
         private void KeepersDay_plus_Click(object sender, RoutedEventArgs e)
         {
             KeepersDay.Value++;
@@ -36,6 +38,7 @@ namespace Активности.Pages
             KeepersDay.Value--;
             counter();
         }
+
         private void KeepersWeek_plus_Click(object sender, RoutedEventArgs e)
         {
             KeepersWeek.Value++;
@@ -47,6 +50,7 @@ namespace Активности.Pages
             KeepersWeek.Value--;
             counter();
         }
+
         private void Arena4Gods_plus_Click(object sender, RoutedEventArgs e)
         {
             Arena4Gods.Value++;
@@ -82,8 +86,16 @@ namespace Активности.Pages
             BlackMarket.Value--;
             counter();
         }
+
         private void counter()
         {
+            Properties.Settings.Default.set_min_Arena4Gods = Arena4Gods.Value;
+            Properties.Settings.Default.set_min_Bath = Bath.Value;
+            Properties.Settings.Default.set_min_BlackMarket = BlackMarket.Value;
+            Properties.Settings.Default.set_min_KeepersWeek = KeepersWeek.Value;
+            Properties.Settings.Default.set_min_KeepersDay = KeepersDay.Value;
+            Properties.Settings.Default.Save();
+
             string Arena4Gods_count = Convert.ToString(Arena4Gods.Value) + " из " + Convert.ToString(Arena4Gods.Maximum);
             string Bath_count = Convert.ToString(Bath.Value) + " из " + Convert.ToString(Bath.Maximum);
             string BlackMarket_count = Convert.ToString(BlackMarket.Value) + " из " + Convert.ToString(BlackMarket.Maximum);
@@ -109,6 +121,16 @@ namespace Активности.Pages
             {
                 KeepersDay_counter.Content = KeepersDay_count;
             }));
+        }
+
+        private void set_init()
+        {
+            Arena4Gods.Value = Properties.Settings.Default.set_min_Arena4Gods;
+            Bath.Value = Properties.Settings.Default.set_min_Bath;
+            BlackMarket.Value = Properties.Settings.Default.set_min_BlackMarket;
+            KeepersWeek.Value = Properties.Settings.Default.set_min_KeepersWeek;
+            KeepersDay.Value = Properties.Settings.Default.set_min_KeepersDay;
+            Properties.Settings.Default.Save();
         }
     }
 }
