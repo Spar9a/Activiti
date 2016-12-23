@@ -63,36 +63,10 @@ namespace Активности
         {
             TimeZoneInfo moscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
             DateTime moscowDateTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, moscowTimeZone);
-            string time;
-            //string update_time;
-            if ((moscowDateTime.TimeOfDay.Minutes >= 10) && (moscowDateTime.TimeOfDay.Seconds >= 10))
-            {
-                time = Convert.ToString(moscowDateTime.TimeOfDay.Hours) + ":" + Convert.ToString(moscowDateTime.TimeOfDay.Minutes) + ":" + Convert.ToString(moscowDateTime.TimeOfDay.Seconds);
-                //update_time = Convert.ToString(24 - moscowDateTime.TimeOfDay.Hours) + ":" + Convert.ToString(60 - moscowDateTime.TimeOfDay.Minutes) + ":" + Convert.ToString(60 - moscowDateTime.TimeOfDay.Seconds);
-            }
-            else if ((moscowDateTime.TimeOfDay.Minutes >= 0) && (moscowDateTime.TimeOfDay.Minutes < 10) && (moscowDateTime.TimeOfDay.Seconds >= 10))
-            {
-                time = Convert.ToString(moscowDateTime.TimeOfDay.Hours) + ":0" + Convert.ToString(moscowDateTime.TimeOfDay.Minutes) + ":" + Convert.ToString(moscowDateTime.TimeOfDay.Seconds);
-                //update_time = Convert.ToString(24 - moscowDateTime.TimeOfDay.Hours) + ":" + Convert.ToString(60 - moscowDateTime.TimeOfDay.Minutes) + ":" + Convert.ToString(60 - moscowDateTime.TimeOfDay.Seconds);
-            }
-            else if ((moscowDateTime.TimeOfDay.Minutes >= 0) && (moscowDateTime.TimeOfDay.Minutes < 10) && (moscowDateTime.TimeOfDay.Seconds < 10) && (moscowDateTime.TimeOfDay.Seconds >= 0))
-            {
-                time = Convert.ToString(moscowDateTime.TimeOfDay.Hours) + ":0" + Convert.ToString(moscowDateTime.TimeOfDay.Minutes) + ":0" + Convert.ToString(moscowDateTime.TimeOfDay.Seconds);
-                //update_time = Convert.ToString(24 - moscowDateTime.TimeOfDay.Hours) + ":" + Convert.ToString(60 - moscowDateTime.TimeOfDay.Minutes) + ":" + Convert.ToString(60 - moscowDateTime.TimeOfDay.Seconds);
-            }
-            else
-            {
-                time = Convert.ToString(moscowDateTime.TimeOfDay.Hours) + ":" + Convert.ToString(moscowDateTime.TimeOfDay.Minutes) + ":0" + Convert.ToString(moscowDateTime.TimeOfDay.Seconds);
-                //update_time = Convert.ToString(24 - moscowDateTime.TimeOfDay.Hours) + ":" + Convert.ToString(60 - moscowDateTime.TimeOfDay.Minutes) + ":" + Convert.ToString(60 - moscowDateTime.TimeOfDay.Seconds);
-            }
-            /*if ((moscowDateTime.TimeOfDay.Hours == 2) && (moscowDateTime.TimeOfDay.Minutes == 12) && (moscowDateTime.TimeOfDay.Seconds == 0))
-            {
-                System.Windows.MessageBox.Show("Все ежедневные квесты обновились!");
-            }*/
 
             Server_Time.Dispatcher.BeginInvoke(new Action(delegate ()
             {
-                Server_Time.Content = time;
+                Server_Time.Content = moscowDateTime.TimeOfDay.ToString();
             }));
 
             /*Update_Time.Dispatcher.BeginInvoke(new Action(delegate ()
