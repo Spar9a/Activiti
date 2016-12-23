@@ -26,9 +26,12 @@ namespace Активности
     public partial class MainWindow : Window
     {
         private System.Windows.Forms.NotifyIcon m_notifyIcon;
+        private DateTime moscowDateTime;
         protected Process[] procs;
         public MainWindow()
         {
+            TimeZoneInfo moscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
+            moscowDateTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, moscowTimeZone);
             InitializeComponent();
             m_notifyIcon = new System.Windows.Forms.NotifyIcon();
             m_notifyIcon.BalloonTipTitle = "Программа помещена в трей";
@@ -39,10 +42,11 @@ namespace Активности
                 m_notifyIcon.Icon = new System.Drawing.Icon(iconStream);
                 m_notifyIcon.Click += new EventHandler(m_notifyIcon_Click);
             }
+            Update(null, null);
             ContentBlock.Content = new Necessary();
             Timer Timer1 = new Timer();
             Timer1.Interval = 1000;
-            Timer1.Tick += new EventHandler(Timer1_Tick);
+            Timer1.Tick += new EventHandler(Update);
             Timer1.Tick += new EventHandler(RevaSearch);
             Timer1.Enabled = true;
         }
@@ -59,28 +63,14 @@ namespace Активности
                     }
             }
         }
-        void Timer1_Tick(object sender, EventArgs e)
+        void Update(object sender, EventArgs e)
         {
-            TimeZoneInfo moscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
-            DateTime moscowDateTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, moscowTimeZone);
-
             Server_Time.Dispatcher.BeginInvoke(new Action(delegate ()
             {
                 Server_Time.Content = moscowDateTime.TimeOfDay.ToString();
             }));
 
-            /*Update_Time.Dispatcher.BeginInvoke(new Action(delegate ()
-            {
-                Update_Time.Content = update_time;
-            }));*/
-
-            if (Properties.Settings.Default.last_used_day.DayOfYear != moscowDateTime.DayOfYear)
-            {
-                Properties.Settings.Default.Reset();
-                Properties.Settings.Default.last_used_day = moscowDateTime;
-                Properties.Settings.Default.Save();
-                System.Windows.MessageBox.Show("Все ежедневные квесты обновились!");
-            }
+            if (Properties.Settings.Default.last_used_day.DayOfYear != moscowDateTime.DayOfYear) ResetQuests();
         }
 
         private WindowState m_storedWindowState = WindowState.Normal;
@@ -145,6 +135,14 @@ namespace Активности
                     ContentBlock.Content = new Minimum();
                     break;
             }
+        }
+
+        public void ResetQuests()
+        {
+            Properties.Settings.Default.Reset();
+            Properties.Settings.Default.last_used_day = moscowDateTime;
+            Properties.Settings.Default.Save();
+            System.Windows.MessageBox.Show("Все ежедневные квесты обновились!");
         }
     }
 }
