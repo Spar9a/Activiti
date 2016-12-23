@@ -41,13 +41,10 @@ namespace Активности
             }
             ContentBlock.Content = new Necessary();
             Timer Timer1 = new Timer();
-            Timer Timer2 = new Timer();
             Timer1.Interval = 1000;
-            Timer2.Interval = 1000;
             Timer1.Tick += new EventHandler(Timer1_Tick);
-            Timer2.Tick += new EventHandler(RevaSearch);
+            Timer1.Tick += new EventHandler(RevaSearch);
             Timer1.Enabled = true;
-            Timer2.Enabled = true;
         }
         void RevaSearch(object sender, EventArgs e)
         {
