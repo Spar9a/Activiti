@@ -68,7 +68,7 @@ namespace Активности
 
             Server_Time.Dispatcher.BeginInvoke(new Action(delegate ()
             {
-                Server_Time.Content = moscowDateTime.TimeOfDay.ToString();
+                Server_Time.Content = moscowDateTime.ToShortTimeString();
             }));
 
             if (Properties.Settings.Default.last_used_day.DayOfYear != moscowDateTime.DayOfYear)
