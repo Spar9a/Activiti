@@ -35,7 +35,7 @@ namespace Activity
             m_notifyIcon = new System.Windows.Forms.NotifyIcon();
             m_notifyIcon.BalloonTipTitle = "Программа помещена в трей";
             m_notifyIcon.BalloonTipText = "Чтобы открыть программу снова, нажмите на её иконку";
-            m_notifyIcon.Text = "Activiti"; //Пишется когда наводишь мышкой на программу в трее
+            m_notifyIcon.Text = "Activity"; //Пишется когда наводишь мышкой на программу в трее
             using (Stream iconStream = System.Windows.Application.GetResourceStream(new Uri("pack://application:,,,/Activity;component/image/murr.ico")).Stream)
             {
                 m_notifyIcon.Icon = new System.Drawing.Icon(iconStream);

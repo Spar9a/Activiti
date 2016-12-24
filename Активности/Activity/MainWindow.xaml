@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Activity"
         xmlns:PerformanceData="clr-namespace:System.Diagnostics.PerformanceData;assembly=System.Core" x:Class="Activity.MainWindow"
         mc:Ignorable="d"
-        Title="Activiti" Height="700" Width="630" Background="#FF3F3F46"
+        Title="Activity" Height="700" Width="630" Background="#FF3F3F46"
         StateChanged = "OnStateChanged"
         IsVisibleChanged = "OnIsVisibleChanged"
         Closing = "Window_Closing" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ResizeMode="CanMinimize" Icon="image/murr.ico" WindowStartupLocation="CenterScreen">
