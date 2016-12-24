@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Активности.Pages
+namespace Activity.Pages
 {
     /// <summary>
     /// Логика взаимодействия для Additionaly.xaml

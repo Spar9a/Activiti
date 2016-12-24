@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Активности.Pages
+namespace Activity.Pages
 {
     /// <summary>
     /// Логика взаимодействия для Necessary.xaml
@@ -23,6 +23,7 @@ namespace Активности.Pages
         public Necessary()
         {
             InitializeComponent();
+            Console.WriteLine(App.dict["Quests"].ToString());
             set_init();
             counter();
         }

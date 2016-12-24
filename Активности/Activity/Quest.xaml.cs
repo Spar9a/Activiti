@@ -13,22 +13,26 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Активности
+namespace Activity
 {
     /// <summary>
-    /// Логика взаимодействия для PageButton.xaml
+    /// Логика взаимодействия для Quest.xaml
     /// </summary>
-    public partial class PageButton : UserControl
+    public partial class Quest : UserControl
     {
-        public PageButton()
+        public Quest()
         {
             InitializeComponent();
         }
-        public static readonly DependencyProperty ContentPageButtonProperty = DependencyProperty.Register("ContentPageButton", typeof(string), typeof(PageButton));
-        public string ContentPageButton
+
+        private void guild_10_plus_Click(object sender, RoutedEventArgs e)
         {
-            get { return textPage.Content.ToString(); }
-            set { textPage.Content = value; }
+
+        }
+
+        private void guild_10_minus_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

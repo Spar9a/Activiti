@@ -15,10 +15,10 @@ using System.Windows.Shapes;
 using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
-using Активности.Pages;
+using Activity.Pages;
 using System.Diagnostics;
 
-namespace Активности
+namespace Activity
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -36,7 +36,7 @@ namespace Активности
             m_notifyIcon.BalloonTipTitle = "Программа помещена в трей";
             m_notifyIcon.BalloonTipText = "Чтобы открыть программу снова, нажмите на её иконку";
             m_notifyIcon.Text = "Activiti"; //Пишется когда наводишь мышкой на программу в трее
-            using (Stream iconStream = System.Windows.Application.GetResourceStream(new Uri("pack://application:,,,/Активности;component/image/murr.ico")).Stream)
+            using (Stream iconStream = System.Windows.Application.GetResourceStream(new Uri("pack://application:,,,/Activity;component/image/murr.ico")).Stream)
             {
                 m_notifyIcon.Icon = new System.Drawing.Icon(iconStream);
                 m_notifyIcon.Click += new EventHandler(m_notifyIcon_Click);

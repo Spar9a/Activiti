@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Активности"
-        xmlns:PerformanceData="clr-namespace:System.Diagnostics.PerformanceData;assembly=System.Core" x:Class="Активности.MainWindow"
+        xmlns:local="clr-namespace:Activity"
+        xmlns:PerformanceData="clr-namespace:System.Diagnostics.PerformanceData;assembly=System.Core" x:Class="Activity.MainWindow"
         mc:Ignorable="d"
         Title="Activiti" Height="700" Width="630" Background="#FF3F3F46"
         StateChanged = "OnStateChanged"
@@ -27,8 +27,8 @@
             <Grid Margin="-3,0,0,5" Width="124">
                 <local:ControlButton x:Name="Time" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Click="ContentControl_Click"/>
                 <StackPanel Orientation="Vertical">
-                    <Label x:Name="lb_Server_Time" Content="Время сервера:" Foreground="Black" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14" FontWeight="Bold"/>
-                    <Label x:Name="Server_Time" Content="22:22:22" Foreground="Black" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold" FontSize="28" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="-3,0,0,0"/>
+                    <Label x:Name="lb_Server_Time" Content="Время сервера:" Foreground="Black" FontFamily="/Activity;component/Fonts/#Diablo" FontSize="14" FontWeight="Bold"/>
+                    <Label x:Name="Server_Time" Content="22:22:22" Foreground="Black" FontFamily="/Activity;component/Fonts/#Diablo" FontWeight="Bold" FontSize="28" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="-3,0,0,0"/>
                 </StackPanel>
             </Grid>
         </StackPanel>
