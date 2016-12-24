@@ -26,12 +26,11 @@ namespace Активности
     public partial class MainWindow : Window
     {
         private System.Windows.Forms.NotifyIcon m_notifyIcon;
+        private TimeZoneInfo moscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
         private DateTime moscowDateTime;
         protected Process[] procs;
         public MainWindow()
         {
-            TimeZoneInfo moscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
-            moscowDateTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, moscowTimeZone);
             InitializeComponent();
             m_notifyIcon = new System.Windows.Forms.NotifyIcon();
             m_notifyIcon.BalloonTipTitle = "Программа помещена в трей";
@@ -65,6 +64,8 @@ namespace Активности
         }
         void Update(object sender, EventArgs e)
         {
+            moscowDateTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, moscowTimeZone);
+
             Server_Time.Dispatcher.BeginInvoke(new Action(delegate ()
             {
                 Server_Time.Content = moscowDateTime.TimeOfDay.ToString();
