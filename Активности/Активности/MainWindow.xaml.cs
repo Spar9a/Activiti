@@ -70,7 +70,13 @@ namespace Активности
                 Server_Time.Content = moscowDateTime.TimeOfDay.ToString();
             }));
 
-            if (Properties.Settings.Default.last_used_day.DayOfYear != moscowDateTime.DayOfYear) ResetQuests();
+            if (Properties.Settings.Default.last_used_day.DayOfYear != moscowDateTime.DayOfYear)
+            {
+                ResetQuests();
+
+                if (moscowDateTime.DayOfWeek == DayOfWeek.Monday) ResetWeekQuests();
+            }
+
         }
 
         private WindowState m_storedWindowState = WindowState.Normal;
@@ -139,10 +145,36 @@ namespace Активности
 
         public void ResetQuests()
         {
-            Properties.Settings.Default.Reset();
+            Properties.Settings.Default.set_nec_guild10 = 0;
+            Properties.Settings.Default.set_nec_guild_build = 0;
+            Properties.Settings.Default.set_nec_ostrov = 0;
+            Properties.Settings.Default.set_nec_pack = 0;
+            Properties.Settings.Default.set_min_Arena4Gods = 0;
+            Properties.Settings.Default.set_min_Bath = 0;
+            Properties.Settings.Default.set_min_BlackMarket = 0;
+            Properties.Settings.Default.set_min_KeepersDay = 0;
+            Properties.Settings.Default.set_des_Jumps = 0;
+            Properties.Settings.Default.set_Barbarians = 0;
+            Properties.Settings.Default.set_Northerners = 0;
+            Properties.Settings.Default.set_BambooVillage = 0;
+            Properties.Settings.Default.set_CentralCity = 0;
+            Properties.Settings.Default.set_Cruise = 0;
+            Properties.Settings.Default.set_Mushrooms = 0;
+            Properties.Settings.Default.set_Falmary = 0;
+            Properties.Settings.Default.set_Bear = 0;
+            Properties.Settings.Default.set_scient = 0;
             Properties.Settings.Default.last_used_day = moscowDateTime;
             Properties.Settings.Default.Save();
             System.Windows.MessageBox.Show("Все ежедневные квесты обновились!");
+        }
+        public void ResetWeekQuests()
+        {
+            Properties.Settings.Default.set_min_KeepersWeek = 0;
+            Properties.Settings.Default.set_des_Steps25 = 0;
+            Properties.Settings.Default.set_des_Brakteat5Quest = 0;
+            Properties.Settings.Default.set_Steps120 = 0;
+            Properties.Settings.Default.Save();
+            System.Windows.MessageBox.Show("Все еженедельные квесты обновились!");
         }
     }
 }

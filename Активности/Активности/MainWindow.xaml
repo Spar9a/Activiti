@@ -28,7 +28,7 @@
                 <local:ControlButton x:Name="Time" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Click="ContentControl_Click"/>
                 <StackPanel Orientation="Vertical">
                     <Label x:Name="lb_Server_Time" Content="Время сервера:" Foreground="Black" FontFamily="/Активности;component/Fonts/#Diablo" FontSize="14" FontWeight="Bold"/>
-                    <Label x:Name="Server_Time" Content="21:21:21" Foreground="Black" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold" FontSize="28" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Label x:Name="Server_Time" Content="22:22:22" Foreground="Black" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold" FontSize="28" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="-3,0,0,0"/>
                 </StackPanel>
             </Grid>
         </StackPanel>
