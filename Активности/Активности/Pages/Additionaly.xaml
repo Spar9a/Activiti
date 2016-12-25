@@ -18,7 +18,7 @@
                                     <Label x:Name="Steps120_counter" FontSize="20" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" FontFamily="/Активности;component/Fonts/#Diablo" FontWeight="Bold"/>
                                     <Border Width="28">
                                         <Border.Background>
-                                            <ImageBrush ImageSource="/Активности;component/image/Ежедневные.png" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="/Активности;component/image/Еженедельный.png" Stretch="UniformToFill"/>
                                         </Border.Background>
                                     </Border>
                                 </StackPanel>
