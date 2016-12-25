@@ -26,7 +26,7 @@ namespace Activity.Pages
             var quests = App.dict["Quests"] as Quest[];
             foreach(Quest q in quests)
             {
-                questList.Children.Add(q);
+                if (q.questCategory == MainWindow.QuestTabs.Necessary) questList.Children.Add(q);
             }
 
             set_init();
@@ -131,5 +131,6 @@ namespace Activity.Pages
             pack.Value = Properties.Settings.Default.set_nec_pack;
             Properties.Settings.Default.Save();
         }
+
     }
 }

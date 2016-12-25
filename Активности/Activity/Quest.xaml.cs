@@ -17,6 +17,9 @@ namespace Activity
 {
     public partial class Quest : UserControl
     {
+        public static int questId = 0;
+        private MainWindow.QuestTabs _questCategory;
+        public MainWindow.QuestTabs questCategory { get { return _questCategory; } set { _questCategory = value; } }
         public string questName
         {
             get { return labelQuestName.Content.ToString(); }
@@ -48,6 +51,18 @@ namespace Activity
             get { return int.Parse(questProgress.Value.ToString()); }
             set { questProgress.Value = value; }
         }
+        public int maxQuestCounter
+        {
+            get { return int.Parse(questProgress.Maximum.ToString()); }
+            set {
+                questProgress.Maximum = value;
+                if (value == 0)
+                {
+                    questProgressParent.Visibility = Visibility.Collapsed;
+                    labelCounter.Visibility = Visibility.Collapsed;
+                }
+            }
+        }
         public string leftText
         {
             get { return textBlockLeft.Text; }
@@ -62,6 +77,8 @@ namespace Activity
         public Quest()
         {
             InitializeComponent();
+            if (Properties.Settings.Default.questSaves != null) questCounter = int.Parse(Properties.Settings.Default.questSaves[questId]?.ToString());
+            questId++;
         }
 
         private void progressClick(object sender, RoutedEventArgs e)

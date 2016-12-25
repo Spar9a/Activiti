@@ -28,6 +28,7 @@ namespace Activity
         private System.Windows.Forms.NotifyIcon m_notifyIcon;
         private TimeZoneInfo moscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
         private DateTime moscowDateTime;
+        private Dictionary<string, System.Windows.Controls.UserControl> pagesCache = new Dictionary<string, System.Windows.Controls.UserControl>();
         protected Process[] procs;
         public MainWindow()
         {
@@ -42,13 +43,14 @@ namespace Activity
                 m_notifyIcon.Click += new EventHandler(m_notifyIcon_Click);
             }
             Update(null, null);
-            ContentBlock.Content = new Necessary();
+            LoadPage("necessarily");
             Timer Timer1 = new Timer();
             Timer1.Interval = 1000;
             Timer1.Tick += new EventHandler(Update);
             Timer1.Tick += new EventHandler(RevaSearch);
             Timer1.Enabled = true;
         }
+
         void RevaSearch(object sender, EventArgs e)
         {
             if (WindowState == WindowState.Minimized)
@@ -120,28 +122,41 @@ namespace Activity
         {
             m_notifyIcon.Dispose();
             m_notifyIcon = null;
+            if (Properties.Settings.Default.questSaves == null) Properties.Settings.Default.questSaves = new System.Collections.ArrayList();
+            Properties.Settings.Default.questSaves.Clear();
+            var quests = App.dict["Quests"] as Quest[];
+            Properties.Settings.Default.questSaves.AddRange(quests.Select(x => x.questCounter).ToArray());
             Properties.Settings.Default.Save();
         }
-
+        public void LoadPage(string pageName)
+        {
+            System.Windows.Controls.UserControl uc;
+            if (!pagesCache.TryGetValue(pageName, out uc))
+            {
+                switch (pageName)
+                {
+                    case "necessarily":
+                        uc = new Necessary();
+                        break;
+                    case "additional":
+                        uc = new Additionaly();
+                        break;
+                    case "desirable":
+                        uc = new Desirable();
+                        break;
+                    case "minimum":
+                        uc = new Minimum();
+                        break;
+                }
+                pagesCache.Add(pageName, uc);
+            }
+            ContentBlock.Content = uc;
+        }
         private void ContentControl_Click(object sender, RoutedEventArgs e)
         {
             var btn = sender as System.Windows.Controls.Button;
             string name = btn.Name;
-            switch (name)
-            {
-                case "necessarily":
-                    ContentBlock.Content = new Necessary();
-                    break;
-                case "additional":
-                    ContentBlock.Content = new Additionaly();
-                    break;
-                case "desirable":
-                    ContentBlock.Content = new Desirable();
-                    break;
-                case "minimum":
-                    ContentBlock.Content = new Minimum();
-                    break;
-            }
+            LoadPage(name);
         }
 
         public void ResetQuests()
@@ -177,5 +192,12 @@ namespace Activity
             Properties.Settings.Default.Save();
             System.Windows.MessageBox.Show("Все еженедельные квесты обновились!");
         }
+        public enum QuestTabs
+        {
+            Necessary,
+            Additionaly,
+            Desirable,
+            Minimum
+        };
     }
 }

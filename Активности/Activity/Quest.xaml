@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Activity"
              mc:Ignorable="d" 
-             d:DesignHeight="200" d:DesignWidth="550">
+             d:DesignHeight="200" d:DesignWidth="560">
     <UserControl.Resources>
         <local:JoinStringConverter x:Key="JoinStringConverter" />
     </UserControl.Resources>
@@ -15,7 +15,7 @@
                 <Grid>
                     <Label x:Name="labelQuestName" Content="Название квеста" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,2,0,2" Foreground="#FFB5B5B5" FontWeight="Bold" FontFamily="/Activity;component/Fonts/#Diablo" FontSize="14"/>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                        <Label FontSize="20" Background="{x:Null}" FontWeight="Bold" FontFamily="/Activity;component/Fonts/#Diablo" Margin="0,-2,0,0">
+                        <Label x:Name="labelCounter" FontSize="20" Background="{x:Null}" FontWeight="Bold" FontFamily="/Activity;component/Fonts/#Diablo" Margin="0,-2,0,0">
                             <Label.Content>
                                 <MultiBinding Converter="{StaticResource JoinStringConverter}" ConverterParameter=" из ">
                                     <Binding ElementName="questProgress" Path="Value" />
@@ -28,13 +28,13 @@
                 </Grid>
             </Border>
             <Grid Margin="0,30,0,0">
-                <Grid Width="28" HorizontalAlignment="Right" Grid.Column="2">
-                    <ProgressBar x:Name="questProgress" BorderThickness="0" Background="#FFA6A6A6" Height="116" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Orientation="Vertical" Maximum="10"/>
+                <Grid x:Name="questProgressParent" Width="28" HorizontalAlignment="Right" Grid.Column="2">
+                    <ProgressBar x:Name="questProgress" BorderThickness="0" Background="#FFA6A6A6" Height="116" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Orientation="Vertical" Maximum="1"/>
                     <local:CounterButton x:Name="plus" VerticalAlignment="Top" Click="progressClick" Image="/Activity;component/image/plus.png"/>
                     <local:CounterButton x:Name="minus" VerticalAlignment="Bottom" Click="progressClick" Image="/Activity;component/image/minus.png"/>
                 </Grid>
-                <TextBlock x:Name="textBlockLeft" Text="dfgdfgdsjfkjdshfg" TextWrapping="Wrap" Margin="4,4,4,4" HorizontalAlignment="Left" Width="220" Foreground="#FFB5B5B5" FontFamily="/Activity;component/Fonts/#Diablo" FontWeight="Bold"/>
-                <TextBlock x:Name="textBlockRight" Text="dfgdfgdsjfkjdshfg" TextWrapping="Wrap" Margin="4,4,32,4" HorizontalAlignment="Right" Width="280" Foreground="#FFB5B5B5" FontFamily="/Activity;component/Fonts/#Diablo" FontWeight="Bold"/>
+                <TextBlock x:Name="textBlockLeft" Text="Говнище всякое" Margin="4,4,4,4" HorizontalAlignment="Left" Width="250" Foreground="#FFB5B5B5" FontFamily="/Activity;component/Fonts/#Diablo" FontWeight="Bold" TextWrapping="Wrap"/>
+                <TextBlock x:Name="textBlockRight" Text="Всякий говнотекст" TextWrapping="Wrap" Margin="4,4,32,4" HorizontalAlignment="Right" Width="260" Foreground="#FFB5B5B5" FontFamily="/Activity;component/Fonts/#Diablo" FontWeight="Bold"/>
             </Grid>
         </Grid>
     </Border>

@@ -9,7 +9,6 @@
     <ScrollViewer>
         <Grid>
             <StackPanel x:Name="questList" Orientation="Vertical">
-                <local:Quest/>
 
                 <Border x:Name="Гильдия_10_кв" Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
                     <Grid>

@@ -23,6 +23,11 @@ namespace Activity.Pages
         public Additionaly()
         {
             InitializeComponent();
+            var quests = App.dict["Quests"] as Quest[];
+            foreach (Quest q in quests)
+            {
+                if (q.questCategory == MainWindow.QuestTabs.Additionaly) questList.Children.Add(q);
+            }
             set_init();
             counter();
         }

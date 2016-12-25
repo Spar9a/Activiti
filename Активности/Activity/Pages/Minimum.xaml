@@ -9,7 +9,7 @@
              d:DesignHeight="2002" d:DesignWidth="564" ScrollViewer.CanContentScroll="True">
     <ScrollViewer>
         <Grid>
-            <StackPanel Orientation="Vertical">
+            <StackPanel x:Name="questList" Orientation="Vertical">
                 <Border x:Name="Орден_Хранителей" Height="150" VerticalAlignment="Top" Margin="2,4,4,0" Background="#FF534741" BorderBrush="#FF5F3A17" BorderThickness="2">
                     <Grid>
                         <Border Height="30" VerticalAlignment="Top" BorderBrush="#FF362F2D" BorderThickness="0,0,0,2" Background="#FF594125">
