@@ -23,7 +23,12 @@ namespace Activity.Pages
         public Necessary()
         {
             InitializeComponent();
-            Console.WriteLine(App.dict["Quests"].ToString());
+            var quests = App.dict["Quests"] as Quest[];
+            foreach(Quest q in quests)
+            {
+                questList.Children.Add(q);
+            }
+
             set_init();
             counter();
         }

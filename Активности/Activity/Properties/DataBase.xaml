@@ -4,7 +4,12 @@
                     xmlns:local="clr-namespace:Activity;assembly=Activity">
     
     <x:Array x:Key="Quests" Type="local:Quest">
-        <local:Quest/>
+        <local:Quest 
+            questName="[Гильдия] Цепочка из 10 квестов" 
+            questType="Daily" 
+            leftText="" 
+            rightText="Dополнительная информация: {n}Этот квеcт дает не только прогресс в прокачки гильдии но и большое кол-во опыта. За гильд квесты вы будете получать вклад, который сможете тратить на различные бафы и плюшки."
+            />
         <local:Quest/>
         <local:Quest/>
     </x:Array>
