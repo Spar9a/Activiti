@@ -33,8 +33,8 @@
                     <local:CounterButton x:Name="plus" VerticalAlignment="Top" Click="progressClick" Image="/Activity;component/image/plus.png"/>
                     <local:CounterButton x:Name="minus" VerticalAlignment="Bottom" Click="progressClick" Image="/Activity;component/image/minus.png"/>
                 </Grid>
-                <TextBlock x:Name="textBlockLeft" Text="dfgdfgdsjfkjdshfg" TextWrapping="Wrap" Margin="2,2,0,2" HorizontalAlignment="Left" Width="250" />
-                <TextBlock x:Name="textBlockRight" Text="dfgdfgdsjfkjdshfg" TextWrapping="Wrap" Margin="0,2,32,2" HorizontalAlignment="Right" Width="250" />
+                <TextBlock x:Name="textBlockLeft" Text="dfgdfgdsjfkjdshfg" TextWrapping="Wrap" Margin="4,4,4,4" HorizontalAlignment="Left" Width="220" Foreground="#FFB5B5B5" FontFamily="/Activity;component/Fonts/#Diablo" FontWeight="Bold"/>
+                <TextBlock x:Name="textBlockRight" Text="dfgdfgdsjfkjdshfg" TextWrapping="Wrap" Margin="4,4,32,4" HorizontalAlignment="Right" Width="280" Foreground="#FFB5B5B5" FontFamily="/Activity;component/Fonts/#Diablo" FontWeight="Bold"/>
             </Grid>
         </Grid>
     </Border>
