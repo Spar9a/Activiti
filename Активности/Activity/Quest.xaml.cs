@@ -64,15 +64,14 @@ namespace Activity
             InitializeComponent();
         }
 
-        private void guild_10_plus_Click(object sender, RoutedEventArgs e)
+        private void progressClick(object sender, RoutedEventArgs e)
         {
-
+            if ((sender as Button).Name == "plus")
+                questCounter += 1;
+            else
+                questCounter -= 1;
         }
 
-        private void guild_10_minus_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         public enum QuestType
         {

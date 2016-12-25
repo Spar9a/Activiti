@@ -30,8 +30,8 @@
             <Grid Margin="0,30,0,0">
                 <Grid Width="28" HorizontalAlignment="Right" Grid.Column="2">
                     <ProgressBar x:Name="questProgress" BorderThickness="0" Background="#FFA6A6A6" Height="116" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Orientation="Vertical" Maximum="10"/>
-                    <local:CounterButton x:Name="guild_10_plus" VerticalAlignment="Top" Click="guild_10_plus_Click" Image="/Activity;component/image/plus.png"/>
-                    <local:CounterButton x:Name="guild_10_minus" VerticalAlignment="Bottom" Click="guild_10_minus_Click" Image="/Activity;component/image/minus.png"/>
+                    <local:CounterButton x:Name="plus" VerticalAlignment="Top" Click="progressClick" Image="/Activity;component/image/plus.png"/>
+                    <local:CounterButton x:Name="minus" VerticalAlignment="Bottom" Click="progressClick" Image="/Activity;component/image/minus.png"/>
                 </Grid>
                 <TextBlock x:Name="textBlockLeft" Text="dfgdfgdsjfkjdshfg" TextWrapping="Wrap" Margin="2,2,0,2" HorizontalAlignment="Left" Width="250" />
                 <TextBlock x:Name="textBlockRight" Text="dfgdfgdsjfkjdshfg" TextWrapping="Wrap" Margin="0,2,32,2" HorizontalAlignment="Right" Width="250" />
