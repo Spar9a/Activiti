@@ -77,7 +77,7 @@ namespace Activity
             {
                 ResetQuests();
 
-                if (Properties.Settings.Default.last_used_day.DayOfWeek > moscowDateTime.DayOfWeek) ResetWeekQuests();
+                if (Properties.Settings.Default.last_used_day.DayOfWeek > moscowDateTime.DayOfWeek || (moscowDateTime - Properties.Settings.Default.last_used_day).TotalDays >= 7) ResetWeekQuests();
             }
 
         }
