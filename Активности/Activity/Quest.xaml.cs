@@ -77,7 +77,12 @@ namespace Activity
         public Quest()
         {
             InitializeComponent();
-            if (Properties.Settings.Default.questSaves != null) questCounter = int.Parse(Properties.Settings.Default.questSaves[questId]?.ToString());
+            if (Properties.Settings.Default.questSaves != null && Properties.Settings.Default.questSaves.Count > questId)
+            {
+                int temp;
+                int.TryParse(Properties.Settings.Default.questSaves[questId]?.ToString(), out temp);
+                questCounter = temp;
+            }
             questId++;
         }
 
