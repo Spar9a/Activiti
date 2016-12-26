@@ -80,8 +80,7 @@ namespace Activity
             if (Properties.Settings.Default.questSaves != null && Properties.Settings.Default.questSaves.Count > questId)
             {
                 int temp;
-                int.TryParse(Properties.Settings.Default.questSaves[questId]?.ToString(), out temp);
-                questCounter = temp;
+                if (int.TryParse(Properties.Settings.Default.questSaves[questId]?.ToString(), out temp)) questCounter = temp;
             }
             questId++;
         }
