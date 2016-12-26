@@ -4,6 +4,7 @@
                     xmlns:local="clr-namespace:Activity;assembly=Activity">
 
     <x:Array x:Key="Quests" Type="local:Quest">
+        
         <local:Quest
             maxQuestCounter="10"
             questCategory="Necessary"
@@ -12,6 +13,23 @@
             leftText="НПЦ:	Трактирщик{n}{n}Расположение:	190,-105,65 (Ги База){n}{n}Требования:	30лвл" 
             rightText="Dополнительная информация: {n}Этот квеcт дает не только прогресс в прокачки гильдии но и большое кол-во опыта. За гильд квесты вы будете получать вклад, который сможете тратить на различные бафы и плюшки."
             />
+        
+        <local:Quest
+            maxQuestCounter="10"
+            questCategory="Necessary"
+            questName="[Гильдия] Стройка" 
+            questType="Daily" 
+            leftText="НПЦ:	Доска заданий{n}{n}Расположение:	139, -94, 65 (Ги База){n}{n}Требования:	30лвл" 
+            />
+        
+        <local:Quest
+            maxQuestCounter="10"
+            questCategory="Necessary"
+            questName="Пиратский остров" 
+            questType="Daily" 
+            leftText="НПЦ:	Искатель приключений{n}{n}Расположение:	2172, 397, 3{n}{n}Требования:	50лвл" 
+            />
+        
         <local:Quest
             maxQuestCounter="10"
             questCategory="Additionaly"
@@ -20,6 +38,7 @@
             leftText="НПЦ:	Трактирщик{n}{n}Расположение:	190,-105,65 (Ги База){n}{n}Требования:	30лвл" 
             rightText="Dополнительная информация: {n}Этот квеcт дает не только прогресс в прокачки гильдии но и большое кол-во опыта. За гильд квесты вы будете получать вклад, который сможете тратить на различные бафы и плюшки."
             />
+        
         <local:Quest
             maxQuestCounter="10"
             questCategory="Desirable"
@@ -28,6 +47,7 @@
             leftText="НПЦ:	Трактирщик{n}{n}Расположение:	190,-105,65 (Ги База){n}{n}Требования:	30лвл" 
             rightText="Dополнительная информация: {n}Этот квеcт дает не только прогресс в прокачки гильдии но и большое кол-во опыта. За гильд квесты вы будете получать вклад, который сможете тратить на различные бафы и плюшки."
             />
+        
         <local:Quest
             maxQuestCounter="10"
             questCategory="Minimum"
