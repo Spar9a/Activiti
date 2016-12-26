@@ -45,7 +45,7 @@ namespace Activity
             Update(null, null);
             LoadPage("necessarily");
             Timer Timer1 = new Timer();
-            Timer1.Interval = 1000;
+            Timer1.Interval = 5000;
             Timer1.Tick += new EventHandler(Update);
             Timer1.Tick += new EventHandler(RevaSearch);
             Timer1.Enabled = true;
@@ -77,7 +77,7 @@ namespace Activity
             {
                 ResetQuests();
 
-                if (moscowDateTime.DayOfWeek == DayOfWeek.Monday) ResetWeekQuests();
+                if (Properties.Settings.Default.last_used_day.DayOfWeek > moscowDateTime.DayOfWeek) ResetWeekQuests();
             }
 
         }
@@ -117,16 +117,20 @@ namespace Activity
             if (m_notifyIcon != null)
                 m_notifyIcon.Visible = show;
         }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void SaveData()
         {
-            m_notifyIcon.Dispose();
-            m_notifyIcon = null;
             if (Properties.Settings.Default.questSaves == null) Properties.Settings.Default.questSaves = new System.Collections.ArrayList();
             Properties.Settings.Default.questSaves.Clear();
             var quests = App.dict["Quests"] as Quest[];
             Properties.Settings.Default.questSaves.AddRange(quests.Select(x => x.questCounter).ToArray());
+            Properties.Settings.Default.last_used_day = moscowDateTime;
             Properties.Settings.Default.Save();
+        }
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            m_notifyIcon.Dispose();
+            m_notifyIcon = null;
+            SaveData();
         }
         public void LoadPage(string pageName)
         {
@@ -161,35 +165,22 @@ namespace Activity
 
         public void ResetQuests()
         {
-            Properties.Settings.Default.set_nec_guild10 = 0;
-            Properties.Settings.Default.set_nec_guild_build = 0;
-            Properties.Settings.Default.set_nec_ostrov = 0;
-            Properties.Settings.Default.set_nec_pack = 0;
-            Properties.Settings.Default.set_min_Arena4Gods = 0;
-            Properties.Settings.Default.set_min_Bath = 0;
-            Properties.Settings.Default.set_min_BlackMarket = 0;
-            Properties.Settings.Default.set_min_KeepersDay = 0;
-            Properties.Settings.Default.set_des_Jumps = 0;
-            Properties.Settings.Default.set_Barbarians = 0;
-            Properties.Settings.Default.set_Northerners = 0;
-            Properties.Settings.Default.set_BambooVillage = 0;
-            Properties.Settings.Default.set_CentralCity = 0;
-            Properties.Settings.Default.set_Cruise = 0;
-            Properties.Settings.Default.set_Mushrooms = 0;
-            Properties.Settings.Default.set_Falmary = 0;
-            Properties.Settings.Default.set_Bear = 0;
-            Properties.Settings.Default.set_scient = 0;
-            Properties.Settings.Default.last_used_day = moscowDateTime;
-            Properties.Settings.Default.Save();
+            var quests = App.dict["Quests"] as Quest[];
+            foreach(Quest q in quests)
+            {
+                if (q.questType != Quest.QuestType.Weekly) q.questCounter = 0;
+            }
+            SaveData();
             System.Windows.MessageBox.Show("Все ежедневные квесты обновились!");
         }
         public void ResetWeekQuests()
         {
-            Properties.Settings.Default.set_min_KeepersWeek = 0;
-            Properties.Settings.Default.set_des_Steps25 = 0;
-            Properties.Settings.Default.set_des_Brakteat5Quest = 0;
-            Properties.Settings.Default.set_Steps120 = 0;
-            Properties.Settings.Default.Save();
+            var quests = App.dict["Quests"] as Quest[];
+            foreach (Quest q in quests)
+            {
+                if (q.questType == Quest.QuestType.Weekly) q.questCounter = 0;
+            }
+            SaveData();
             System.Windows.MessageBox.Show("Все еженедельные квесты обновились!");
         }
         public enum QuestTabs
