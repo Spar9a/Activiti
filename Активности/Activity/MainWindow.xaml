@@ -1,0 +1,37 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Activity"
+        xmlns:PerformanceData="clr-namespace:System.Diagnostics.PerformanceData;assembly=System.Core" x:Class="Activity.MainWindow"
+        mc:Ignorable="d"
+        Title="Activity" Height="700" Width="630" Background="#FF3F3F46"
+        StateChanged = "OnStateChanged"
+        IsVisibleChanged = "OnIsVisibleChanged"
+        Closing = "Window_Closing" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ResizeMode="CanMinimize" Icon="image/murr.ico" WindowStartupLocation="CenterScreen">
+    <Grid x:Name="Grid" Margin="-2,0">
+        <StackPanel x:Name="Controler" Orientation="Horizontal" ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalAlignment="Center" VerticalAlignment="Top" Height="100">
+            <local:ControlButton x:Name="necessarily" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Width="124" Click="ContentControl_Click" Margin="0,0,0,5">
+                <Label Content="Обязательно" FontSize="14"/>
+            </local:ControlButton>
+            <local:ControlButton x:Name="minimum" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Width="124" Click="ContentControl_Click" Margin="-3,0,0,5">
+                <Label Content="Минимум" FontSize="14"/>
+            </local:ControlButton>
+            <local:ControlButton x:Name="desirable" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Width="124" Click="ContentControl_Click" Margin="-3,0,0,5">
+                <Label Content="Желательно" FontSize="14"/>
+            </local:ControlButton>
+            <local:ControlButton x:Name="additional" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Width="124" Click="ContentControl_Click" Margin="-3,0,0,5">
+                <Label Content="Дополнительно" FontSize="14"/>
+            </local:ControlButton>
+            <Grid Margin="-3,0,0,5" Width="124">
+                <local:ControlButton x:Name="Time" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Click="ContentControl_Click"/>
+                <StackPanel Orientation="Vertical">
+                    <Label x:Name="lb_Server_Time" Content="Время сервера:" Foreground="Black" FontFamily="/Activity;component/Fonts/#Diablo" FontSize="14" FontWeight="Bold"/>
+                    <Label x:Name="Server_Time" Content="22:22:22" Foreground="Black" FontFamily="/Activity;component/Fonts/#Diablo" FontWeight="Bold" FontSize="28" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="-3,0,0,0"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <UserControl x:Name="ContentBlock" Margin="3,95,5,0"/>
+    </Grid>
+</Window>
