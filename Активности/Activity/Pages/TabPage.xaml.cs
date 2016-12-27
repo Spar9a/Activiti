@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace Activity.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Desirable.xaml
+    /// Логика взаимодействия для TabPage.xaml
     /// </summary>
-    public partial class Desirable : UserControl
+    public partial class TabPage : UserControl
     {
-        public Desirable()
+        public TabPage()
         {
             InitializeComponent();
-            var quests = App.dict["Quests"] as Quest[];
-            foreach (Quest q in quests)
-            {
-                if (q.questCategory == MainWindow.QuestTabs.Desirable) questList.Children.Add(q);
-            }
         }
     }
 }

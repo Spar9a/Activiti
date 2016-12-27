@@ -28,7 +28,7 @@ namespace Activity
         private System.Windows.Forms.NotifyIcon m_notifyIcon;
         private TimeZoneInfo moscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
         private DateTime moscowDateTime;
-        private Dictionary<string, System.Windows.Controls.UserControl> pagesCache = new Dictionary<string, System.Windows.Controls.UserControl>();
+        private Dictionary<QuestTabs, Pages.TabPage> pagesCache = new Dictionary<QuestTabs, Pages.TabPage>();
         protected Process[] procs;
         public MainWindow()
         {
@@ -43,12 +43,23 @@ namespace Activity
                 m_notifyIcon.Click += new EventHandler(m_notifyIcon_Click);
             }
             Update(null, null);
-            LoadPage("necessarily");
+            LoadPage(QuestTabs.Обязательно);
             Timer Timer1 = new Timer();
             Timer1.Interval = 5000;
             Timer1.Tick += new EventHandler(Update);
             Timer1.Tick += new EventHandler(RevaSearch);
             Timer1.Enabled = true;
+
+            int tabCount = Enum.GetValues(typeof(QuestTabs)).Length;
+            foreach (QuestTabs Tab in Enum.GetValues(typeof(QuestTabs)))
+            {
+                ControlButton cb = new ControlButton();
+                cb.Width = TabControler.Width / tabCount + 1;
+                cb.questTab = Tab;
+                cb.TabName = Tab.ToString();
+                cb.Click += ContentControl_Click;
+                TabControler.Children.Add(cb);
+            }
         }
 
         void RevaSearch(object sender, EventArgs e)
@@ -64,6 +75,7 @@ namespace Activity
                     }
             }
         }
+
         void Update(object sender, EventArgs e)
         {
             moscowDateTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, moscowTimeZone);
@@ -79,7 +91,6 @@ namespace Activity
 
                 if (Properties.Settings.Default.last_used_day.DayOfWeek > moscowDateTime.DayOfWeek || (moscowDateTime - Properties.Settings.Default.last_used_day).TotalDays >= 7) ResetWeekQuests();
             }
-
         }
 
         private WindowState m_storedWindowState = WindowState.Normal;
@@ -90,7 +101,6 @@ namespace Activity
                 Hide();
                 if (m_notifyIcon != null)
                     m_notifyIcon.ShowBalloonTip(2000);
-
             }
             else
                 m_storedWindowState = WindowState;
@@ -117,6 +127,7 @@ namespace Activity
             if (m_notifyIcon != null)
                 m_notifyIcon.Visible = show;
         }
+
         private void SaveData()
         {
             if (Properties.Settings.Default.questSaves == null) Properties.Settings.Default.questSaves = new System.Collections.ArrayList();
@@ -126,53 +137,47 @@ namespace Activity
             Properties.Settings.Default.last_used_day = moscowDateTime;
             Properties.Settings.Default.Save();
         }
+
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             m_notifyIcon.Dispose();
             m_notifyIcon = null;
             SaveData();
         }
-        public void LoadPage(string pageName)
+
+        public void LoadPage(QuestTabs tab)
         {
-            System.Windows.Controls.UserControl uc;
-            if (!pagesCache.TryGetValue(pageName, out uc))
+            Pages.TabPage page;
+            if (!pagesCache.TryGetValue(tab, out page))
             {
-                switch (pageName)
+                page = new Pages.TabPage();
+                var quests = App.dict["Quests"] as Quest[];
+                foreach (Quest q in quests)
                 {
-                    case "necessarily":
-                        uc = new Necessary();
-                        break;
-                    case "additional":
-                        uc = new Additionaly();
-                        break;
-                    case "desirable":
-                        uc = new Desirable();
-                        break;
-                    case "minimum":
-                        uc = new Minimum();
-                        break;
+                    if (q.questCategory == tab) page.questList.Children.Add(q);
                 }
-                pagesCache.Add(pageName, uc);
+                pagesCache.Add(tab, page);
             }
-            ContentBlock.Content = uc;
+            ContentBlock.Content = page;
         }
+
         private void ContentControl_Click(object sender, RoutedEventArgs e)
         {
-            var btn = sender as System.Windows.Controls.Button;
-            string name = btn.Name;
-            LoadPage(name);
+            var btn = sender as ControlButton;
+            LoadPage(btn.questTab);
         }
 
         public void ResetQuests()
         {
             var quests = App.dict["Quests"] as Quest[];
-            foreach(Quest q in quests)
+            foreach (Quest q in quests)
             {
                 if (q.questType != Quest.QuestType.Weekly) q.questCounter = 0;
             }
             SaveData();
             System.Windows.MessageBox.Show("Все ежедневные квесты обновились!");
         }
+
         public void ResetWeekQuests()
         {
             var quests = App.dict["Quests"] as Quest[];
@@ -183,12 +188,14 @@ namespace Activity
             SaveData();
             System.Windows.MessageBox.Show("Все еженедельные квесты обновились!");
         }
+
         public enum QuestTabs
         {
-            Necessary,
-            Additionaly,
-            Desirable,
-            Minimum
+            Обязательно,
+            Минимум,
+            Желательно,
+            Дополнительно,
+            Данжи
         };
     }
 }

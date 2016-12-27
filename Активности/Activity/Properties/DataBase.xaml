@@ -7,7 +7,7 @@
         
         <local:Quest
             maxQuestCounter="10"
-            questCategory="Necessary"
+            questCategory="Обязательно"
             questName="[Гильдия] Цепочка из 10 квестов" 
             questType="Daily" 
             leftText="НПЦ:	Трактирщик{n}{n}Расположение:	190,-105,65 (Ги База){n}{n}Требования:	30лвл" 
@@ -16,7 +16,7 @@
         
         <local:Quest
             maxQuestCounter="10"
-            questCategory="Necessary"
+            questCategory="Обязательно"
             questName="[Гильдия] Стройка" 
             questType="Daily" 
             leftText="НПЦ:	Доска заданий{n}{n}Расположение:	139, -94, 65 (Ги База){n}{n}Требования:	30лвл" 
@@ -24,7 +24,7 @@
         
         <local:Quest
             maxQuestCounter="10"
-            questCategory="Necessary"
+            questCategory="Обязательно"
             questName="Пиратский остров" 
             questType="Daily" 
             leftText="НПЦ:	Искатель приключений{n}{n}Расположение:	2172, 397, 3{n}{n}Требования:	50лвл" 
@@ -32,7 +32,7 @@
         
         <local:Quest
             maxQuestCounter="10"
-            questCategory="Additionaly"
+            questCategory="Обязательно"
             questName="[Гильдия] Цепочка из 10 квестов" 
             questType="Daily" 
             leftText="НПЦ:	Трактирщик{n}{n}Расположение:	190,-105,65 (Ги База){n}{n}Требования:	30лвл" 
@@ -41,7 +41,7 @@
         
         <local:Quest
             maxQuestCounter="10"
-            questCategory="Desirable"
+            questCategory="Желательно"
             questName="[Гильдия] Цепочка из 10 квестов" 
             questType="Daily" 
             leftText="НПЦ:	Трактирщик{n}{n}Расположение:	190,-105,65 (Ги База){n}{n}Требования:	30лвл" 
@@ -50,7 +50,7 @@
         
         <local:Quest
             maxQuestCounter="10"
-            questCategory="Minimum"
+            questCategory="Минимум"
             questName="[Гильдия] Цепочка из 10 квестов" 
             questType="Daily" 
             leftText="НПЦ:	Трактирщик{n}{n}Расположение:	190,-105,65 (Ги База){n}{n}Требования:	30лвл" 
@@ -58,7 +58,7 @@
             />
         <local:Quest
             maxQuestCounter="10"
-            questCategory="Minimum"
+            questCategory="Минимум"
             questName="[Гильдия] Цепочка из 10 квестов" 
             questType="Daily" 
             leftText="НПЦ:	Трактирщик{n}{n}Расположение:	190,-105,65 (Ги База){n}{n}Требования:	30лвл" 

@@ -86,10 +86,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="JoinStringConverter.cs" />
+    <Compile Include="Pages\TabPage.xaml.cs">
+      <DependentUpon>TabPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Quest.xaml.cs">
       <DependentUpon>Quest.xaml</DependentUpon>
     </Compile>
-    <Page Include="Dictionary1.xaml">
+    <Page Include="Styles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -107,51 +110,20 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PageButton.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\Additionaly.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\Desirable.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\Minimum.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\Necessary.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Resource Include="Properties\DataBase.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Resource>
+    <Page Include="Pages\TabPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Quest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PageButton.xaml.cs">
-      <DependentUpon>PageButton.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Additionaly.xaml.cs">
-      <DependentUpon>Additionaly.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Desirable.xaml.cs">
-      <DependentUpon>Desirable.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Minimum.xaml.cs">
-      <DependentUpon>Minimum.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Necessary.xaml.cs">
-      <DependentUpon>Necessary.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
