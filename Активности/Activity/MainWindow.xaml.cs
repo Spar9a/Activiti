@@ -20,11 +20,17 @@ using System.Diagnostics;
 
 namespace Activity
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        public enum QuestTabs // отсюда он генерит вкладочки, просто добавляем или убираем и в проге появляются а так же маштабируются вкладочки
+        {
+            Обязательно,
+            Минимум,
+            Желательно,
+            Дополнительно,
+            Данжи
+        };
+
         private System.Windows.Forms.NotifyIcon m_notifyIcon;
         private TimeZoneInfo moscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
         private DateTime moscowDateTime;
@@ -188,14 +194,5 @@ namespace Activity
             SaveData();
             System.Windows.MessageBox.Show("Все еженедельные квесты обновились!");
         }
-
-        public enum QuestTabs
-        {
-            Обязательно,
-            Минимум,
-            Желательно,
-            Дополнительно,
-            Данжи
-        };
     }
 }
