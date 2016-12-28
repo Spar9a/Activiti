@@ -4,7 +4,7 @@
                     xmlns:local="clr-namespace:Activity;assembly=Activity">
 
     <x:Array x:Key="Quests" Type="local:Quest">
-        
+
         <local:Quest
             maxQuestCounter="10"
             questCategory="Обязательно"
@@ -13,58 +13,421 @@
             leftText="НПЦ:	Трактирщик{n}{n}Расположение:	190,-105,65 (Ги База){n}{n}Требования:	30лвл" 
             rightText="Dополнительная информация: {n}Этот квеcт дает не только прогресс в прокачки гильдии но и большое кол-во опыта. За гильд квесты вы будете получать вклад, который сможете тратить на различные бафы и плюшки."
             />
-        
+
         <local:Quest
-            maxQuestCounter="10"
+            maxQuestCounter="1"
             questCategory="Обязательно"
             questName="[Гильдия] Стройка" 
             questType="Daily" 
             leftText="НПЦ:	Доска заданий{n}{n}Расположение:	139, -94, 65 (Ги База){n}{n}Требования:	30лвл" 
+            rightText="Dополнительная информация: {n}Этот квеcт обновляется каждый раз, когда на базе гильдии начинается стройка. Делать обязательно."
             />
-        
+
         <local:Quest
-            maxQuestCounter="10"
+            maxQuestCounter="2"
             questCategory="Обязательно"
             questName="Пиратский остров" 
             questType="Daily" 
             leftText="НПЦ:	Искатель приключений{n}{n}Расположение:	2172, 397, 3{n}{n}Требования:	50лвл" 
-            />
-        
+           rightText="Dополнительная информация: {n} Делаем ежедневно!"
+             />
+
         <local:Quest
-            maxQuestCounter="10"
+            maxQuestCounter="0"
             questCategory="Обязательно"
-            questName="[Гильдия] Цепочка из 10 квестов" 
-            questType="Daily" 
-            leftText="НПЦ:	Трактирщик{n}{n}Расположение:	190,-105,65 (Ги База){n}{n}Требования:	30лвл" 
+            questName="PVP Арена" 
+            questType="Other" 
+            leftText="Требования:	40лвл" 
             rightText="Dополнительная информация: {n}Этот квеcт дает не только прогресс в прокачки гильдии но и большое кол-во опыта. За гильд квесты вы будете получать вклад, который сможете тратить на различные бафы и плюшки."
             />
-        
+
         <local:Quest
-            maxQuestCounter="10"
+            maxQuestCounter="1"
+            questCategory="Обязательно"
+            questName="Перевозка паков" 
+            questType="Daily" 
+            leftText="Расположение:	5081, -1430, 3{n}{n}Требования:	30лвл" 
+            rightText="Dополнительная информация: {n}Этот квеcт дает не только прогресс в прокачки гильдии но и большое кол-во опыта. За гильд квесты вы будете получать вклад, который сможете тратить на различные бафы и плюшки."
+            />
+
+        <local:Quest
+            maxQuestCounter="0"
+            questCategory="Обязательно"
+            questName="Квест на рыбалку" 
+            questType="Other" 
+            leftText="Расположение:	5515, -2592, 1 (Ги База){n}{n}"
+            rightText="Dополнительная информация: {n} Делаем постоянно когда есть 2 шт. волшебных рукописей. Делается в 3+ человек."
+            />
+
+        <local:Quest
+            maxQuestCounter="1"
             questCategory="Желательно"
-            questName="[Гильдия] Цепочка из 10 квестов" 
+            questName="Орден Хранителей" 
             questType="Daily" 
-            leftText="НПЦ:	Трактирщик{n}{n}Расположение:	190,-105,65 (Ги База){n}{n}Требования:	30лвл" 
-            rightText="Dополнительная информация: {n}Этот квеcт дает не только прогресс в прокачки гильдии но и большое кол-во опыта. За гильд квесты вы будете получать вклад, который сможете тратить на различные бафы и плюшки."
+            leftText="Расположение:	5254, 60, -76{n}{n}"
             />
-        
+
         <local:Quest
-            maxQuestCounter="10"
-            questCategory="Минимум"
-            questName="[Гильдия] Цепочка из 10 квестов" 
-            questType="Daily" 
-            leftText="НПЦ:	Трактирщик{n}{n}Расположение:	190,-105,65 (Ги База){n}{n}Требования:	30лвл" 
-            rightText="Dополнительная информация: {n}Этот квеcт дает не только прогресс в прокачки гильдии но и большое кол-во опыта. За гильд квесты вы будете получать вклад, который сможете тратить на различные бафы и плюшки."
+            maxQuestCounter="2"
+            questCategory="Желательно"
+            questName="Орден Хранителей" 
+            questType="Weekly" 
+            rightText="Dополнительная информация: {n} Смотрите в ордене какой данж надо пройти на текущей неделе."
             />
+
         <local:Quest
-            maxQuestCounter="10"
-            questCategory="Минимум"
-            questName="[Гильдия] Цепочка из 10 квестов" 
+            maxQuestCounter="1"
+            questCategory="Желательно"
+            questName="Арена Четырёх Богов" 
             questType="Daily" 
-            leftText="НПЦ:	Трактирщик{n}{n}Расположение:	190,-105,65 (Ги База){n}{n}Требования:	30лвл" 
-            rightText="Dополнительная информация: {n}Этот квеcт дает не только прогресс в прокачки гильдии но и большое кол-во опыта. За гильд квесты вы будете получать вклад, который сможете тратить на различные бафы и плюшки."
-            />
-        
+            leftText="Расположение:	6032, -1882, 4 (Сулан){n}{n}
+                      4791, 233, 148 (Приют){n}{n}"
+            rightText="Dополнительная информация: {n} Дает много опыта."
+           />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Желательно"
+            questName="Охота" 
+            questType="Daily" 
+            leftText="Расположение:	5257, -2713, 9 (25 лвл){n}{n}
+                        587, 2027, 4 (40 лвл){n}{n}
+                        -2697, -3827, 261 (60 лвл){n}{n}"
+            rightText="Dополнительная информация: {n} Дает много опыта."
+           />
+
+        <local:Quest
+            maxQuestCounter="4"
+            questCategory="Желательно"
+            questName="Черный рынок" 
+            questType="Daily"
+            leftText="Расположение:	5515, -2592, 1 (Ги База){n}{n}"
+            rightText="Dополнительная информация: {n} Дает много таэелей. Расположение квестов смотреть в Пути война."
+           />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Желательно"
+            questName="Баня" 
+            questType="Daily" 
+            leftText="Расположение:	5652, -1522, 5 (Сулан){n}{n}
+            2172, 1293, 127 (Астерион){n}{n}
+            -3039, 864, 270 (Калахар){n}{n}"
+            rightText="Dополнительная информация: {n} Можно делать раз в пять дней чтобы отбивать сразу все лимиты."
+          />
+
+        <local:Quest
+            maxQuestCounter="0"
+            questCategory="Желательно"
+            questName="Черная репутация" 
+            questType="Weekly" 
+            rightText="Dополнительная информация: {n} Водим игроков которые ниже вас на 10-15 лвл по данжам. И покупает ресурсы за эту репутацию."
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Данжи"
+            questName="35-я Паучиха(или 50-я Башня Эксповая)" 
+            questType="Daily" 
+            leftText="Расположение:	4113, 1481, 56(Паучиха){n}{n}-1341, 3159(Башня){n}{n}"
+            rightText="Dополнительная информация: {n}  Получаем много опыта."
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Данжи"
+            questName="45-я Паучиха" 
+            questType="Daily" 
+            leftText="Расположение:	4113, 1481, 56{n}{n}"
+            rightText="Dополнительная информация: {n}  Фармим карты 45-49, а так же шмот и ресы."
+          />
+
+        <local:Quest
+            maxQuestCounter="3"
+            questCategory="Данжи"
+            questName="45-й Красноголовый (3 ЗВЕЗДЫ - 3 захода)" 
+            questType="Weekly" 
+            leftText="Расположение:	5836, -318, 3{n}{n}"
+            rightText="Dополнительная информация: {n}  Закрываем на 3 звезды чтобы получить шмот."
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Данжи"
+            questName="40-й Красноголовый" 
+            questType="Daily" 
+            leftText="Расположение:	5836, -318, 3{n}{n}"
+            rightText="Dополнительная информация: {n}  Здесь вы можете фармить карты для ресов на шмот 49-й"
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Данжи"
+            questName="52-я Стена" 
+            questType="Daily" 
+            leftText="Расположение:	-2837, -1558{n}{n}"
+            rightText="Dополнительная информация: {n}  Фармим карты 55-59, а так же ресы и шмот!"
+          />
+
+        <local:Quest
+            maxQuestCounter="2"
+            questCategory="Данжи"
+            questName="55-й Рейд Красноголовый (10 человек - 2 захода)" 
+            questType="Weekly" 
+            leftText="Расположение:	5836, -318, 3{n}{n}"
+            rightText="Dополнительная информация: {n} Закрываем на 3 звезды чтобы получить больше профита."
+          />
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Данжи"
+            questName="55-я Обратка Красноголовый(Фарм глифов)" 
+            questType="Daily" 
+            leftText="Расположение:	5836, -318, 3{n}{n}"
+            rightText="Dополнительная информация: {n} Фарми глифы + падают карты 55-59."
+          />
+
+        <local:Quest
+            maxQuestCounter="3"
+            questCategory="Данжи"
+            questName="59-й Дракон" 
+            questType="Weekly" 
+            leftText=""
+           rightText="Dополнительная информация: {n} Фарми карт 55-59 + Рецепты с Дракона!"
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Данжи"
+            questName="59-е Кисточка(Амулет-Бубенцы)" 
+            questType="Weekly" 
+            leftText="Расположение:	-1341, 3159{n}{n}"
+           rightText="Dополнительная информация: {n} Кисточка - дополнительные статы!"
+          />
+
+        <local:Quest
+            maxQuestCounter="2"
+            questCategory="Данжи"
+            questName="60-й Рейд(Паучиха)" 
+            questType="Weekly" 
+            leftText="Расположение:	4113, 1481, 56{n}{n}"
+           rightText="Dополнительная информация: {n} Фармим! Обязательно, много ресов!"
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Данжи"
+            questName="60-й Рейд(Машинариум)" 
+            questType="Weekly" 
+            leftText="Расположение:	-2697, -3827, 261{n}{n}"
+           rightText="Dополнительная информация: {n} Фармим! Обязательно, много ресов!"
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Данжи"
+            questName="62-е Машинариум" 
+            questType="Daily" 
+            leftText="Расположение:	-2697, -3827, 261{n}{n}"
+           rightText="Dополнительная информация: {n} Фарми карты с ресами\шмотками!"
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Данжи"
+            questName="65-й Рейд Машинариум(10 человек)" 
+            questType="Weekly" 
+            leftText="Расположение:	-2697, -3827, 261{n}{n}"
+           rightText="Dополнительная информация: {n} Обязательно ходить\Ресы\Шмотки на 60-й лвл."
+          />
+
+        <local:Quest
+            maxQuestCounter="3"
+            questCategory="Данжи"
+            questName="69-е Вторые Драконы" 
+            questType="Weekly" 
+            leftText=""
+           rightText="Dополнительная информация: {n} Фарми карты с ресами\шмотками!"
+          />
+
+        <local:Quest
+            maxQuestCounter="3"
+            questCategory="Минимум"
+            questName="25 шагов" 
+            questType="Weekly" 
+            leftText="Расположение:	5896, -1965, 4 (Сулан){n}-2273, 849, 80 (Калахар){n}5467, -427, 2 (Озерная Деревня){n}{n}"
+           rightText="Dополнительная информация: {n} Таких квеста 3 в неделю, в центральном, у левого и у правого города"
+          />
+
+        <local:Quest
+            maxQuestCounter="5"
+            questCategory="Минимум"
+            questName="5 квестов на Брактеат" 
+            questType="Weekly" 
+            leftText="Расположение:	4865, -2044, 71{n}{n}"
+           rightText="Dополнительная информация: {n} Для тех, кто хочет через пару месяцев иметь преимущество перед теми, кто не делал это"
+          />
+
+        <local:Quest
+            maxQuestCounter="0"
+            questCategory="Минимум"
+            questName="Прыжки" 
+            questType="Daily" 
+            leftText="Расположение:	4860,-2040{n}{n}"
+           rightText="Dополнительная информация: {n} Дополнительный опыт."
+          />
+
+        <local:Quest
+            maxQuestCounter="0"
+            questCategory="Минимум"
+            questName="Доска Авантюриста" 
+            questType="Other" 
+            leftText="Расположение:	5916, -1886, 3{n}{n}Требования:	50лвл"
+           rightText="Dополнительная информация: {n} Много таэлей"
+          />
+
+        <local:Quest
+            maxQuestCounter="0"
+            questCategory="Желательно"
+            questName="Кентавры" 
+            questType="Other" 
+            leftText="Расположение:	Пиратский остров{n}{n}"
+           rightText="Dополнительная информация: {n} Фармим Кентавров(Мобов обычных). Лут юзаем и качаем Репу фракции, покупаем Камни ПвП"
+          />
+
+        <local:Quest
+            maxQuestCounter="4"
+            questCategory="Минимум"
+            questName="69-е Межсерверка" 
+            questType="Daily" 
+            leftText=""
+           rightText="Dополнительная информация: {n} Нужно для: Амулета(Нижняя права экипировка) + классовые пассивки"
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Минимум"
+            questName="Котел" 
+            questType="Daily" 
+            leftText=""
+           rightText="Dополнительная информация: {n} Даст примерно 2кк опыта."
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Минимум"
+            questName="Забег" 
+            questType="Daily" 
+            leftText=""
+           rightText="Dополнительная информация: {n} За хороший забег могут дать обрывки книги ярости."
+          />
+
+        <local:Quest
+            maxQuestCounter="2"
+            questCategory="Желательно"
+            questName="Карнавал(Вторник-Суббота)" 
+            questType="Daily" 
+            leftText=""
+           rightText="Dополнительная информация: {n} Желательно делать сразу на нескольких персонажах и передавать все на основу."
+          />
+
+        <local:Quest
+            maxQuestCounter="0"
+            questCategory="Минимум"
+            questName="Кентавр Босс" 
+            questType="Other" 
+            leftText="Расположение:	Пиратский остров{n}{n}"
+           rightText="Dополнительная информация: {n} Обязательно ходим. Минимум в 2 пати."
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Дополнительно"
+            questName="[Фракции] Ученные" 
+            questType="Daily" 
+            leftText="Расположение:	4807, 179, 148 {n}{n}"
+           rightText="Dополнительная информация: {n} Фармим репутацию у фракции."
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Дополнительно"
+            questName="[Фракции] Медведи" 
+            questType="Daily" 
+            leftText="Расположение:	4508, 850, 19 {n}{n}"
+           rightText="Dополнительная информация: {n} Фармим репутацию у фракции."
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Дополнительно"
+            questName="[Фракции] Фалмари" 
+            questType="Daily" 
+            leftText="Расположение:	5590, -2376, 17 {n}{n}"
+           rightText="Dополнительная информация: {n} Фармим репутацию у фракции."
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Дополнительно"
+            questName="[Фракции] Грибочки" 
+            questType="Daily" 
+            leftText="Расположение:	4950, -1950, 43 {n}{n}"
+           rightText="Dополнительная информация: {n} Фармим репутацию у фракции."
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Дополнительно"
+            questName="[Фракции] Крылатые" 
+            questType="Daily" 
+            leftText="Расположение:	5159, 1318, 2{n}{n}"
+           rightText="Dополнительная информация: {n} Фармим репутацию у фракции."
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Дополнительно"
+            questName="[Фракции] Сулан" 
+            questType="Daily" 
+            leftText="Расположение:	5660, -1534, 14 {n}{n}"
+           rightText="Dополнительная информация: {n} Фармим репутацию у фракции."
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Дополнительно"
+            questName="[Фракции] Озерная деревня" 
+            questType="Daily" 
+            leftText="Расположение:	5406, -304, 3 {n}{n}"
+           rightText="Dополнительная информация: {n} Фармим репутацию у фракции."
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Дополнительно"
+            questName="[Фракции] Монастырь" 
+            questType="Daily" 
+            leftText="Расположение:	4813, 1651, 27 {n}{n}"
+           rightText="Dополнительная информация: {n} Фармим репутацию у фракции."
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Дополнительно"
+            questName="[Фракции] Северные волки" 
+            questType="Daily" 
+            leftText="Расположение:	4807, 179, 148{n}{n}"
+           rightText="Dополнительная информация: {n} Фармим репутацию у фракции."
+          />
+
+        <local:Quest
+            maxQuestCounter="1"
+            questCategory="Обязательно"
+            questName="120 шагов квест" 
+            questType="Weekly" 
+            leftText="Расположение:	5449, -1926, 9{n}{n}"
+           rightText="Dополнительная информация: {n} Фармим чертежи шмота."
+          />
     </x:Array>
 
 
