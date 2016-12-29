@@ -16,6 +16,12 @@ namespace Activity
             get { return GetValue(TabNameProperty).ToString(); }
             set { SetValue(TabNameProperty, value); }
         }
+        public static readonly DependencyProperty ActiveOpacityProperty = DependencyProperty.Register("ActiveOpacity", typeof(double), typeof(ControlButton));
+        public double ActiveOpacity
+        {
+            get { return double.Parse(GetValue(ActiveOpacityProperty).ToString()); }
+            set { SetValue(ActiveOpacityProperty, value); }
+        }
         public MainWindow.QuestTabs questTab;
     }
 }

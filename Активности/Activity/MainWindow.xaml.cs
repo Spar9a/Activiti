@@ -49,23 +49,24 @@ namespace Activity
                 m_notifyIcon.Click += new EventHandler(m_notifyIcon_Click);
             }
             Update(null, null);
-            LoadPage(QuestTabs.Обязательно);
             Timer Timer1 = new Timer();
             Timer1.Interval = 5000;
             Timer1.Tick += new EventHandler(Update);
             Timer1.Tick += new EventHandler(RevaSearch);
             Timer1.Enabled = true;
 
-            int tabCount = Enum.GetValues(typeof(QuestTabs)).Length;
-            foreach (QuestTabs Tab in Enum.GetValues(typeof(QuestTabs)))
+            var questTabArray = Enum.GetValues(typeof(QuestTabs));
+            foreach (QuestTabs Tab in questTabArray)
             {
                 ControlButton cb = new ControlButton();
-                cb.Width = TabControler.Width / tabCount + 1;
+                cb.Width = TabControler.Width / questTabArray.Length;
                 cb.questTab = Tab;
                 cb.TabName = Tab.ToString();
                 cb.Click += ContentControl_Click;
                 TabControler.Children.Add(cb);
             }
+
+            LoadPage(QuestTabs.Обязательно);
         }
 
         void RevaSearch(object sender, EventArgs e)
@@ -164,6 +165,13 @@ namespace Activity
                 }
                 pagesCache.Add(tab, page);
             }
+
+            foreach (ControlButton cb in TabControler.Children)
+            {
+                if (cb.questTab == tab) cb.ActiveOpacity = 0.2; // видимость плашки поверх кнопки
+                else cb.ActiveOpacity = 0;
+            }
+            
             ContentBlock.Content = page;
         }
 

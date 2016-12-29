@@ -73,7 +73,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:ControlButton}">
                     <!-- We use Grid as a root because it is easy to add more elements to customize the button -->
-                    <Grid x:Name="Grid">
+                    <Grid>
                         <Border x:Name="Border" Background="#FF613D20"
                            BorderBrush="#FFA67C52"
                            BorderThickness="3"/>
@@ -84,6 +84,7 @@
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                     RecognizesAccessKey="True"/>
                         <Label Content="{TemplateBinding TabName}" FontSize="13" VerticalAlignment="Bottom" HorizontalContentAlignment="Center"/>
+                        <Border Background="White" BorderThickness="0" Opacity="{TemplateBinding ActiveOpacity}"/>
                     </Grid>
                     <!--Each state sets a brush on the Border in the template -->
                     <ControlTemplate.Triggers>
